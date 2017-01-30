@@ -46,16 +46,17 @@ public class StudentListings {
         System.out.println("Donald Davis Assignment 1");
         System.out.println("IT 2660 Data Structures and Algorithms, CRN 13907,");
         System.out.println("Due February 9, 2017     Spring 2017");
-        System.out.println("Chapter 2 Exercise 19,20 + 21");
+        System.out.println("Chapter 2 Exercise 19,20 + 21" + "\n");
     }
 
     public static void main(String[] args)  {
-
+        StudentListings newStudent;
         StudentListings studentListings = new StudentListings();
 
         displayClassInfo();
 
-        studentListings.getInput();
+         newStudent = studentListings.getInput();
+         System.out.println(newStudent.toString());
 
     }
 }
