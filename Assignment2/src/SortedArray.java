@@ -7,70 +7,64 @@ Chapter 2 Exercise 20
 import java.util.Scanner;
 
 public class SortedArray {
-    String name;
-    String id;
-    String gpa;
+    String name, id, gpa;
+    int max, next;
     Scanner input = new Scanner(System.in);
+    StudentListings[] students;
 
-    public SortedArray(String n, String num, String a){
-        name = n;
-        id = num;
-        gpa = a;
-    }
-    public SortedArray(){
-
+    public SortedArray(int maximumSize) {
+     max = maximumSize;
     }
 
-    public String toString()    {
-        return("Name is " + name + "\nG.P.A. is " + gpa + "\nStudent ID is " + id + "\n");
-    }
-    public SortedArray deepCopy(){
-        SortedArray clone = new SortedArray(name, id, gpa);
-        return clone;
-    }
-
-    public SortedArray getInput()   {
-        SortedArray student = new SortedArray();
-        System.out.println("Enter the Student Name");
-        student.name = input.nextLine();
-        System.out.println("Enter the StudentID");
-        student.id = input.nextLine();
-        System.out.println("Enter the Student's G.P.A.");
-        student.gpa = input.nextLine();
-        return student;
-    }
-
-    public static void displayClassInfo()   {
-        System.out.println("Donald Davis Assignment 1");
-        System.out.println("IT 2660 Data Structures and Algorithms, CRN 13907,");
-        System.out.println("Due February 9, 2017     Spring 2017");
-        System.out.println("Chapter 2 Exercise 19,20 + 21" + "\n");
-    }
-    //Handcoded SortedArray method
-    public String[] sortArrayFetch(int high, String targetKey)  {
-        String[] inputArray = new String[high];
-        int low = 0;
-        int maximum = high - 1;
-        int i = maximum / 2;
-        while(targetKey != inputArray[i]){
-            if(targetKey < inputArray[i] && maximum != low) {
-                maximum = i - 1;
-            }
-            else    {
-                low = i +1;
-            }
-            i = (low + maximum) / 2;
+    public boolean insert(StudentListings newNode)  {
+        next = 0;
+        students = new StudentListings[max];
+        if (next >= max)    {
+            return false;
         }
-        return inputArray[i];
-
+        students[next] = newNode.deepCopy();
+        if (students[next] == null)  {
+            return false;
+        }
+        next += next;
+        return true;
     }
 
+    public StudentListings fetch(String targetKey)  {
+        StudentListings node;
+        StudentListings temp;
+        int i = 0;
+        while(i < next && !(students[i].compareTo(targetKey) == 0))  {
+            i++;
+        }
+        if (i == next) return null;
+        node = students[i].deepCopy();
+        if (i != 0) {
+            temp = students[i - 1];
+            students[i - 1] = students[i];
+            students[i] = temp;
+        }
+        return node;
+    }
+
+    public boolean delete(String targetKey) {
+        int i = 0;
+        while (i < next && !(students[i].compareTo(targetKey) == 0)) {
+            i++;
+        }
+        if (i == next) return false;
+        students[i] = students[next - 1];
+        students[next - 1] = null;
+        next -= next;
+        return true;
+    }
+
+    public boolean update(String targetKey, StudentListings newNode)    {
+        if(delete(targetKey) == false) return false;
+        else if (insert(newNode) == false) return false;
+        else return true;
+    }
     public static void main(String[] args)  {
-        SortedArray sortedStudent;
-        SortedArray copyOfnewStudent;
-        SortedArray sortedArray = new SortedArray();
-
-        displayClassInfo();
-
+       
     }
 }
