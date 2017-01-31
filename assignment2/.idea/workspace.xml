@@ -16,15 +16,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StudentListings.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StudentListings.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StudentListings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="401">
+              <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
               <folding>
-                <element signature="e#0#1842#0" expanded="true" />
+                <element signature="e#0#2078#0" expanded="true" />
                 <element signature="method#StudentListings#0;class#StudentListings#0" expanded="false" />
                 <element signature="method#StudentListings#1;class#StudentListings#0" expanded="false" />
+                <element signature="method#displayClassInfo#0;class#StudentListings#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SortedArray.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SortedArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#2138#0" expanded="true" />
+                <element signature="method#displayClassInfo#0;class#SortedArray#0" expanded="false" />
+                <marker date="1485832564324" expanded="false" signature="318:378" ph="{...}" />
+                <marker date="1485832564324" expanded="false" signature="403:411" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -49,6 +65,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/Students.java" />
         <option value="$PROJECT_DIR$/src/StudentListings.java" />
+        <option value="$PROJECT_DIR$/src/SortedArray.java" />
       </list>
     </option>
   </component>
@@ -352,7 +369,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1680" height="1016" extended-state="7" />
+    <frame x="-8" y="-8" width="1680" height="1016" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -404,9 +421,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#1842#0" expanded="true" />
+            <element signature="e#0#2078#0" expanded="true" />
             <element signature="method#StudentListings#0;class#StudentListings#0" expanded="false" />
             <element signature="method#StudentListings#1;class#StudentListings#0" expanded="false" />
+            <element signature="method#displayClassInfo#0;class#StudentListings#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -420,12 +438,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StudentListings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="401">
+          <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding>
-            <element signature="e#0#1842#0" expanded="true" />
+            <element signature="e#0#2078#0" expanded="true" />
             <element signature="method#StudentListings#0;class#StudentListings#0" expanded="false" />
             <element signature="method#StudentListings#1;class#StudentListings#0" expanded="false" />
+            <element signature="method#displayClassInfo#0;class#StudentListings#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortedArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#2138#0" expanded="true" />
+            <element signature="method#displayClassInfo#0;class#SortedArray#0" expanded="false" />
+            <marker date="1485832564324" expanded="false" signature="318:378" ph="{...}" />
+            <marker date="1485832564324" expanded="false" signature="403:411" ph="{...}" />
           </folding>
         </state>
       </provider>
