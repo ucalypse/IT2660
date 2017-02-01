@@ -8,12 +8,11 @@ import java.util.Scanner;
 
 public class SortedArray {
     int max, next;
-    Scanner input = new Scanner(System.in);
     StudentListings[] students;
 
-    public SortedArray(){}
     public SortedArray(int maximumSize) {
      max = maximumSize;
+     students = new StudentListings[max];
     }
 
     public boolean insert(StudentListings newNode)  {
@@ -65,14 +64,22 @@ public class SortedArray {
         else return true;
     }
     public static void main(String[] args)  {
-        SortedArray sortedArray = new SortedArray(12);
+        SortedArray sortedArray = new SortedArray(3);
         sortedArray.students = new StudentListings[]{
                 new StudentListings("Donald Davis", "31", "2.5"),
                 new StudentListings("Peter Faulkner", "32", "3.0"),
                 new StudentListings("Henry Dafoux", "33", "3.5")};
-
+        System.out.println(sortedArray.students.length);
+        //Testing insert method
         sortedArray.insert(new StudentListings("Randy Wilcox", "34", "3.2"));
-
-
+        System.out.println(sortedArray.students.toString());
+        //Testing fetch method
+       // String shouldBeDonaldDavis = sortedArray.fetch("Donald Davis").toString();
+      //  System.out.println(shouldBeDonaldDavis);
+        //Testing delete method
+       // sortedArray.delete("Donald Davis");
+        for (int i = 0; i<sortedArray.students.length; i++) {
+            System.out.println(sortedArray.students[i].toString());
+        }
     }
 }
