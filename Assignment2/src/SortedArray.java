@@ -7,11 +7,11 @@ Chapter 2 Exercise 20
 import java.util.Scanner;
 
 public class SortedArray {
-    String name, id, gpa;
     int max, next;
     Scanner input = new Scanner(System.in);
     StudentListings[] students;
 
+    public SortedArray(){}
     public SortedArray(int maximumSize) {
      max = maximumSize;
     }
@@ -65,6 +65,14 @@ public class SortedArray {
         else return true;
     }
     public static void main(String[] args)  {
-       
+        SortedArray sortedArray = new SortedArray(12);
+        sortedArray.students = new StudentListings[]{
+                new StudentListings("Donald Davis", "31", "2.5"),
+                new StudentListings("Peter Faulkner", "32", "3.0"),
+                new StudentListings("Henry Dafoux", "33", "3.5")};
+
+        sortedArray.insert(new StudentListings("Randy Wilcox", "34", "3.2"));
+
+
     }
 }
