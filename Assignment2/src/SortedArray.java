@@ -4,7 +4,6 @@ IT 2660 Data Structures & Algorithms CRN 13907
 Due February 9, Spring 2017
 Chapter 2 Exercise 20
  */
-import java.util.Scanner;
 
 public class SortedArray {
     int max, next;
@@ -16,8 +15,8 @@ public class SortedArray {
     }
 
     public boolean insert(StudentListings newNode)  {
-        next = 0;
-        students = new StudentListings[max];
+        next = students.length;
+       // students = new StudentListings[max];
         if (next >= max)    {
             return false;
         }
@@ -25,7 +24,7 @@ public class SortedArray {
         if (students[next] == null)  {
             return false;
         }
-        next += next;
+        next += 1;
         return true;
     }
 
@@ -54,7 +53,7 @@ public class SortedArray {
         if (i == next) return false;
         students[i] = students[next - 1];
         students[next - 1] = null;
-        next -= next;
+        next -= 1;
         return true;
     }
 
@@ -63,23 +62,5 @@ public class SortedArray {
         else if (insert(newNode) == false) return false;
         else return true;
     }
-    public static void main(String[] args)  {
-        SortedArray sortedArray = new SortedArray(3);
-        sortedArray.students = new StudentListings[]{
-                new StudentListings("Donald Davis", "31", "2.5"),
-                new StudentListings("Peter Faulkner", "32", "3.0"),
-                new StudentListings("Henry Dafoux", "33", "3.5")};
-        System.out.println(sortedArray.students.length);
-        //Testing insert method
-        sortedArray.insert(new StudentListings("Randy Wilcox", "34", "3.2"));
-        System.out.println(sortedArray.students.toString());
-        //Testing fetch method
-       // String shouldBeDonaldDavis = sortedArray.fetch("Donald Davis").toString();
-      //  System.out.println(shouldBeDonaldDavis);
-        //Testing delete method
-       // sortedArray.delete("Donald Davis");
-        for (int i = 0; i<sortedArray.students.length; i++) {
-            System.out.println(sortedArray.students[i].toString());
-        }
-    }
+
 }
