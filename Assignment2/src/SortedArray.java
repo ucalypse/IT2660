@@ -5,37 +5,53 @@ Due February 9, Spring 2017
 Chapter 2 Exercise 20
  */
 
+import java.io.Console;
+
 public class SortedArray {
-    int max, next;
+    int max, counter;
     StudentListings[] students;
 
     public SortedArray(int maximumSize) {
      max = maximumSize;
-     students = new StudentListings[max];
+     students = new StudentListings[0];
     }
 
     public boolean insert(StudentListings newNode)  {
-        next = students.length;
-       // students = new StudentListings[max];
-        if (next >= max)    {
+        boolean nodeInserted = false;
+        StudentListings[] newArray = new StudentListings[students.length + 1];
+        if (newArray.length > max)  {
             return false;
         }
-        students[next] = newNode.deepCopy();
-        if (students[next] == null)  {
-            return false;
+        counter = 0;
+        if(students.length == 0)    {
+            newArray[counter] = newNode;
         }
-        next += 1;
-        return true;
+        else {
+            for (StudentListings student : students) {
+                boolean addNewNode = student.compareTo(newNode.name) < 0;
+
+                newArray[counter] = student;
+                counter++;
+                if (addNewNode && nodeInserted == false) {
+                    newArray[counter] = newNode;
+                    nodeInserted = true;
+                    counter++;
+                }
+            }
+        }
+        students = newArray;
+           return true;
     }
 
     public StudentListings fetch(String targetKey)  {
         StudentListings node;
         StudentListings temp;
         int i = 0;
-        while(i < next && !(students[i].compareTo(targetKey) == 0))  {
+        while(i < counter && !(students[i].compareTo(targetKey) == 0))  {
             i++;
         }
-        if (i == next) return null;
+        
+        if (i == counter) return null;
         node = students[i].deepCopy();
         if (i != 0) {
             temp = students[i - 1];
@@ -47,13 +63,13 @@ public class SortedArray {
 
     public boolean delete(String targetKey) {
         int i = 0;
-        while (i < next && !(students[i].compareTo(targetKey) == 0)) {
+        while (i < counter && !(students[i].compareTo(targetKey) == 0)) {
             i++;
         }
-        if (i == next) return false;
-        students[i] = students[next - 1];
-        students[next - 1] = null;
-        next -= 1;
+        if (i == counter) return false;
+        students[i] = students[counter - 1];
+        students[counter - 1] = null;
+        counter -= 1;
         return true;
     }
 
