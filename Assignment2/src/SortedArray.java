@@ -5,8 +5,6 @@ Due February 9, Spring 2017
 Chapter 2 Exercise 20
  */
 
-import java.io.Console;
-
 public class SortedArray {
     int max, counter;
     StudentListings[] students;
@@ -55,6 +53,7 @@ public class SortedArray {
         boolean nodeDeleted = false;
         StudentListings[] newArray = new StudentListings[students.length - 1];
         counter = 0;
+        int newCounter = 0;
 //        if (newArray.length > max) {
 //            return false;
 //        }
@@ -62,10 +61,12 @@ public class SortedArray {
 
             if (student.name == targetKey) {
                 nodeDeleted = true;
+                newCounter++;
             }
             if (nodeDeleted == false) {
-                newArray[counter] = students[counter];
+                newArray[counter] = students[newCounter];
                 counter++;
+                newCounter++;
             }
             nodeDeleted = false;
         }
@@ -78,5 +79,6 @@ public class SortedArray {
         else if (insert(newNode) == false) return false;
         else return true;
     }
+
 
 }

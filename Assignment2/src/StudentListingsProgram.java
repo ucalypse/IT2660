@@ -1,5 +1,8 @@
-/**
- * Created by dmd383 on 2/2/2017.
+/*
+Donald Davis
+IT 2660 Data Structures & Algorithms CRN 13907
+Due February 9, Spring 2017
+Chapter 2 Exercise 19 Driver
  */
 import java.util.Scanner;
 public class StudentListingsProgram {

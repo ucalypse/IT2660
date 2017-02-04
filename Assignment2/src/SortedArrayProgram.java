@@ -1,27 +1,41 @@
-/**
- * Created by dmd383 on 2/2/2017.
+/*
+Donald Davis
+IT 2660 Data Structures & Algorithms CRN 13907
+Due February 9, Spring 2017
+Chapter 2 Exercise 20 Driver
  */
 public class SortedArrayProgram {
     public static void main(String[] args)  {
+
         SortedArray sortedArray = new SortedArray(4);
-     //Testing insert method
-        sortedArray.insert(new StudentListings("Donald Davis", "31", "2.5"));
-        sortedArray.insert(new StudentListings("Peter Faulkner", "32", "3.0"));
-        sortedArray.insert(new StudentListings("Henry Dafoux", "33", "3.5"));
+        displayClassInfo();
+        //Testing insert method
+        System.out.println("Insert Method" + "\n");
+        sortedArray.insert(new StudentListings("A", "31", "2.5"));
+        sortedArray.insert(new StudentListings("B", "32", "3.0"));
+        sortedArray.insert(new StudentListings("C", "33", "3.5"));
         for (StudentListings student : sortedArray.students)
         {
                 System.out.println(student.toString());
         }
         //Testing fetch method
-        StudentListings fetchTest = sortedArray.fetch("Donald Davis");
+        System.out.println("Fetch Method" + "\n");
+        StudentListings fetchTest = sortedArray.fetch("A");
             System.out.println(fetchTest.toString());
 
         //Testing delete method
-sortedArray.delete("Donald Davis");
+        System.out.println("Delete Method" + "\n");
+        sortedArray.delete("A");
         for (StudentListings student : sortedArray.students)
         {
             System.out.println(student.toString());
         }
 
+    }
+    public static void displayClassInfo() {
+        System.out.println("Donald Davis Assignment 1");
+        System.out.println("IT 2660 Data Structures and Algorithms, CRN 13907,");
+        System.out.println("Due February 9, 2017     Spring 2017");
+        System.out.println("Chapter 2 Exercise 20" + "\n");
     }
 }
