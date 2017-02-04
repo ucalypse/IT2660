@@ -55,35 +55,23 @@ public class SortedArray {
         boolean nodeDeleted = false;
         StudentListings[] newArray = new StudentListings[students.length - 1];
         counter = 0;
-
+//        if (newArray.length > max) {
+//            return false;
+//        }
         for (StudentListings student : students) {
+
             if (student.name == targetKey) {
                 nodeDeleted = true;
-                counter++;
             }
             if (nodeDeleted == false) {
                 newArray[counter] = students[counter];
                 counter++;
             }
+            nodeDeleted = false;
         }
             students = newArray;
             return true;
         }
-//        if(students.length == 0)    {
-//            newArray[counter] = students[counter];
-//        }
-//        else {
-//            for (StudentListings student : students) {
-////                boolean addNewNode = student.compareTo(newNode.name) < 0;
-//
-//                newArray[counter] = student;
-//                counter++;
-//                if (nodeDeleted == false) {
-//                    newArray[counter] = students[counter];
-//                    nodeDeleted = true;
-//                    counter++;
-//                }
-        //      }
 
     public boolean update(String targetKey, StudentListings newNode) {
         if (delete(targetKey) == false) return false;
