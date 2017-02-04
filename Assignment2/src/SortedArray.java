@@ -12,21 +12,20 @@ public class SortedArray {
     StudentListings[] students;
 
     public SortedArray(int maximumSize) {
-     max = maximumSize;
-     students = new StudentListings[0];
+        max = maximumSize;
+        students = new StudentListings[0];
     }
 
-    public boolean insert(StudentListings newNode)  {
+    public boolean insert(StudentListings newNode) {
         boolean nodeInserted = false;
         StudentListings[] newArray = new StudentListings[students.length + 1];
-        if (newArray.length > max)  {
+        if (newArray.length > max) {
             return false;
         }
         counter = 0;
-        if(students.length == 0)    {
+        if (students.length == 0) {
             newArray[counter] = newNode;
-        }
-        else {
+        } else {
             for (StudentListings student : students) {
                 boolean addNewNode = student.compareTo(newNode.name) < 0;
 
@@ -40,41 +39,54 @@ public class SortedArray {
             }
         }
         students = newArray;
-           return true;
-    }
-
-    public StudentListings fetch(String targetKey)  {
-        StudentListings node;
-        StudentListings temp;
-        int i = 0;
-        while(i < counter && !(students[i].compareTo(targetKey) == 0))  {
-            i++;
-        }
-        
-        if (i == counter) return null;
-        node = students[i].deepCopy();
-        if (i != 0) {
-            temp = students[i - 1];
-            students[i - 1] = students[i];
-            students[i] = temp;
-        }
-        return node;
-    }
-
-    public boolean delete(String targetKey) {
-        int i = 0;
-        while (i < counter && !(students[i].compareTo(targetKey) == 0)) {
-            i++;
-        }
-        if (i == counter) return false;
-        students[i] = students[counter - 1];
-        students[counter - 1] = null;
-        counter -= 1;
         return true;
     }
 
-    public boolean update(String targetKey, StudentListings newNode)    {
-        if(delete(targetKey) == false) return false;
+    public StudentListings fetch(String targetKey) {
+        for (int i = 0; i < students.length; i++) {
+            if (targetKey == students[i].name) {
+                return students[i];
+            }
+        }
+        return new StudentListings();
+    }
+
+    public boolean delete(String targetKey) {
+        boolean nodeDeleted = false;
+        StudentListings[] newArray = new StudentListings[students.length - 1];
+        counter = 0;
+
+        for (StudentListings student : students) {
+            if (student.name == targetKey) {
+                nodeDeleted = true;
+                counter++;
+            }
+            if (nodeDeleted == false) {
+                newArray[counter] = students[counter];
+                counter++;
+            }
+        }
+            students = newArray;
+            return true;
+        }
+//        if(students.length == 0)    {
+//            newArray[counter] = students[counter];
+//        }
+//        else {
+//            for (StudentListings student : students) {
+////                boolean addNewNode = student.compareTo(newNode.name) < 0;
+//
+//                newArray[counter] = student;
+//                counter++;
+//                if (nodeDeleted == false) {
+//                    newArray[counter] = students[counter];
+//                    nodeDeleted = true;
+//                    counter++;
+//                }
+        //      }
+
+    public boolean update(String targetKey, StudentListings newNode) {
+        if (delete(targetKey) == false) return false;
         else if (insert(newNode) == false) return false;
         else return true;
     }
