@@ -83,7 +83,7 @@ public class SortedArray {
                 newCounter++;
             }
             //added error handing in case you try and delete something that's not in the array
-            if (nodeDeleted == false && counter < newArray.length) {
+            if (nodeDeleted == false && counter < students.length-1) {
                 newArray[counter] = students[newCounter];
                 counter++;
                 newCounter++;
@@ -95,9 +95,9 @@ public class SortedArray {
         }
 
     public boolean update(String targetKey, StudentListings newNode) {
-        if (delete(targetKey) == false) return false;
-        else if (insert(newNode) == false) return false;
-        else return true;
+        delete(targetKey);
+        insert(newNode);
+        return true;
     }
 
 
