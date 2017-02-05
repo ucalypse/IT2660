@@ -13,6 +13,29 @@ public class SortedArray {
         max = maximumSize;
         students = new StudentListings[0];
     }
+//Had too many problems trying to sort through the insert method, decided to create separate logic for it
+    public StudentListings[] sortArray(StudentListings  x [ ] )
+    {
+        int j;
+        boolean flag = true;
+        StudentListings temp;
+
+        while ( flag )
+        {
+            flag = false;
+            for ( j = 0;  j < x.length - 1;  j++ )
+            {
+                if ( x [ j ].name.compareToIgnoreCase( x [ j+1 ].name ) > 0 )
+                {
+                    temp = x [ j ];
+                    x [ j ] = x [ j+1];
+                    x [ j+1] = temp;
+                    flag = true;
+                }
+            }
+        }
+        return x;
+    }
 
     public boolean insert(StudentListings newNode) {
         boolean nodeInserted = false;
@@ -23,18 +46,16 @@ public class SortedArray {
         counter = 0;
         if (students.length == 0) {
             newArray[counter] = newNode;
-        } else {
-            for (StudentListings student : students) {
-                boolean addNewNode = student.compareTo(newNode.name) < 0;
+        }
 
+            for (StudentListings student : students) {
                 newArray[counter] = student;
                 counter++;
-                if (addNewNode && nodeInserted == false) {
+                if (nodeInserted == false) {
                     newArray[counter] = newNode;
                     nodeInserted = true;
                     counter++;
                 }
-            }
         }
         students = newArray;
         return true;
@@ -54,16 +75,15 @@ public class SortedArray {
         StudentListings[] newArray = new StudentListings[students.length - 1];
         counter = 0;
         int newCounter = 0;
-//        if (newArray.length > max) {
-//            return false;
-//        }
+
         for (StudentListings student : students) {
 
             if (student.name == targetKey) {
                 nodeDeleted = true;
                 newCounter++;
             }
-            if (nodeDeleted == false) {
+            //added error handing in case you try and delete something that's not in the array
+            if (nodeDeleted == false && counter < newArray.length) {
                 newArray[counter] = students[newCounter];
                 counter++;
                 newCounter++;

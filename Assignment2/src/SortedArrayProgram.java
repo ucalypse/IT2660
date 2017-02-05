@@ -11,12 +11,14 @@ public class SortedArrayProgram {
         displayClassInfo();
         //Testing insert method
         System.out.println("Insert Method" + "\n");
-        sortedArray.insert(new StudentListings("A", "31", "2.5"));
-        sortedArray.insert(new StudentListings("B", "32", "3.0"));
-        sortedArray.insert(new StudentListings("C", "33", "3.5"));
+        sortedArray.insert(new StudentListings("Z", "31", "2.5"));
+        sortedArray.insert(new StudentListings("P", "32", "3.0"));
+        sortedArray.insert(new StudentListings("Q", "33", "3.5"));
+
+        sortedArray.sortArray(sortedArray.students);
         for (StudentListings student : sortedArray.students)
         {
-                System.out.println(student.toString());
+            System.out.println(student.toString());
         }
         //Testing fetch method
         System.out.println("Fetch Method" + "\n");
@@ -25,7 +27,7 @@ public class SortedArrayProgram {
 
         //Testing delete method
         System.out.println("Delete Method" + "\n");
-        sortedArray.delete("A");
+        sortedArray.delete("o");
         for (StudentListings student : sortedArray.students)
         {
             System.out.println(student.toString());
