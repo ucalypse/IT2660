@@ -23,8 +23,6 @@
               <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding>
                 <element signature="e#0#792#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,13 +38,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortedArrayProgram.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SortedArrayProgram.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SortedArrayProgram.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/StudentInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
-                <element signature="method#displayClassInfo#0;class#SortedArrayProgram#0" expanded="false" />
+                <element signature="e#0#1401#0" expanded="true" />
+                <element signature="method#displayClassInfo#0;class#StudentInfo#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,7 +64,7 @@
       <file leaf-file-name="SortedArray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SortedArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
+            <state relative-caret-position="952">
               <caret line="85" column="67" lean-forward="false" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
               <folding>
                 <element signature="e#0#2941#0" expanded="true" />
@@ -88,6 +97,7 @@
         <option value="$PROJECT_DIR$/src/StudentListingsProgram.java" />
         <option value="$PROJECT_DIR$/src/SortedArray.java" />
         <option value="$PROJECT_DIR$/src/SortedArrayProgram.java" />
+        <option value="$PROJECT_DIR$/src/StudentInfo.java" />
       </list>
     </option>
   </component>
@@ -148,10 +158,10 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.SortedArrayProgram">
-    <configuration default="false" name="SortedArrayProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.StudentInfo">
+    <configuration default="false" name="StudentInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="SortedArrayProgram" />
+      <option name="MAIN_CLASS_NAME" value="StudentInfo" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -369,11 +379,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.SortedArrayProgram" />
+      <item index="0" class="java.lang.String" itemvalue="Application.StudentInfo" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.SortedArrayProgram" />
+        <item index="0" class="java.lang.String" itemvalue="Application.StudentInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +401,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1680" height="1016" extended-state="6" />
+    <frame x="-8" y="-8" width="1680" height="1016" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -444,8 +454,6 @@
           <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -462,9 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding>
-            <element signature="method#displayClassInfo#0;class#SortedArrayProgram#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -486,8 +492,6 @@
           <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="28" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -504,9 +508,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding>
-            <element signature="method#displayClassInfo#0;class#SortedArrayProgram#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -528,8 +530,6 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -546,9 +546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="77" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="77" />
-          <folding>
-            <element signature="method#displayClassInfo#0;class#SortedArrayProgram#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -570,8 +568,6 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -588,9 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="method#displayClassInfo#0;class#SortedArrayProgram#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -612,8 +606,6 @@
           <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -636,8 +628,6 @@
           <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -660,8 +650,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -674,18 +662,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Student.java" />
-    <entry file="file://$PROJECT_DIR$/src/StudentListings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#792#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StudentListingsProgram.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -694,9 +670,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/StudentListings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortedArrayProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SortedArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
+        <state relative-caret-position="952">
           <caret line="85" column="67" lean-forward="false" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
           <folding>
             <element signature="e#0#2941#0" expanded="true" />
@@ -706,12 +700,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SortedArrayProgram.java">
+    <entry file="file://$PROJECT_DIR$/src/StudentInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="method#displayClassInfo#0;class#SortedArrayProgram#0" expanded="false" />
+            <element signature="e#0#1401#0" expanded="true" />
+            <element signature="method#displayClassInfo#0;class#StudentInfo#0" expanded="false" />
           </folding>
         </state>
       </provider>
