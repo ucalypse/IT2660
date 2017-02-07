@@ -4,13 +4,11 @@ IT 2660 Data Structures & Algorithms CRN 13907
 Due February 9, Spring 2017
 Chapter 2 Exercise 19
  */
-import java.util.Scanner;
 
 public class StudentListings {
     String name;
     String id;
     String gpa;
-    Scanner input = new Scanner(System.in);
 
     public StudentListings(String n, String num, String a){
         name = n;

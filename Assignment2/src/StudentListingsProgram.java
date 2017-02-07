@@ -17,6 +17,7 @@ public class StudentListingsProgram {
     }
 
     public static void main(String[] args) {
+
         StudentListings newStudent = new StudentListings();
         StudentListings copyOfnewStudent;
         StudentListingsProgram studentListingsProgram = new StudentListingsProgram();
