@@ -38,9 +38,19 @@ public class StudentInfo {
             }
             else if (choice == 4)   {
                 System.out.println("Enter the student's record you wish to replace");
-                
+                String targetStudent = input.next();
+                StudentListings newStudent = addStudent();
+                sortedArray.update(targetStudent, newStudent);
             }
-
+            else if (choice == 5) {
+                sortedArray.sortArray(sortedArray.students);
+                for (StudentListings student : sortedArray.students) {
+                    System.out.println(student);
+                }
+            }
+            else    {
+                    System.out.println("Have a good day");
+            }
         }
     }
 
