@@ -15,26 +15,34 @@ public class StudentInfo {
         System.out.println("Chapter 2 Exercise 20" + "\n");
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         int choice = 0;
         displayClassInfo();
         System.out.println("Enter the maximum size of the data set");
         sortedArray = new SortedArray(input.nextInt());
         System.out.println("Enter the initial number of students");
         int numberOfStudents = input.nextInt();
+
+        while (choice != 6) {
             runMenu();
             choice = input.nextInt();
-            if(choice == 1) {
+            if (choice == 1) {
                 sortedArray.insert(addStudent());
-                runMenu();
-            }
-            else if (choice == 2)   {
+            } else if (choice == 2) {
                 System.out.println(retrieveStudent());
-                runMenu();
             }
+            else if (choice == 3)   {
+                System.out.println("Enter the student's name you wish to delete");
+                sortedArray.delete(input.next());
+            }
+            else if (choice == 4)   {
+                System.out.println("Enter the student's record you wish to replace");
+                
+            }
+
         }
+    }
 
     public static void runMenu()    {
         System.out.println("Choose from the following menu" + "\n" + "1. Insert a new student" + "\n" +

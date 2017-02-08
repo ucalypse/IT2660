@@ -63,7 +63,7 @@ public class SortedArray {
 
     public StudentListings fetch(String targetKey) {
         for (int i = 0; i < students.length; i++) {
-            if (targetKey == students[i].name) {
+            if (targetKey.equals(students[i].name)) {
                 return students[i];
             }
         }
@@ -78,7 +78,7 @@ public class SortedArray {
 
         for (StudentListings student : students) {
 
-            if (student.name == targetKey) {
+            if (student.name.equals(targetKey)) {
                 nodeDeleted = true;
                 newCounter++;
             }
