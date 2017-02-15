@@ -1,0 +1,16 @@
+Write a program to evaluate an arithmetic expression
+written in postfixed notation.  The 
+arithmetic expression will be input as a 
+String (by the user) and will contain only
+integer operands.  Use the following
+code sequence to parse the integers and
+the operators from the input string,
+mathExpression:
+
+import java.util;
+String thisToken;
+StringTokenizer tokens = new String(mathExpression);
+while(tokens.hasMoreTokens())
+{
+thisToken = tokens.nextToken();
+}
