@@ -26,7 +26,13 @@ public class CustomQueue {
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation separated by a space");
         String sampleString = input.nextLine();
-        customQueue.convertToStringArray(sampleString);
+        String [] newValues = customQueue.convertToStringArray(sampleString);
+        int[] result = customQueue.convertToIntegers(newValues);
+        for (int item: result) {
+            System.out.println(item);
+
+        }
+        System.out.println(result.toString());
         stack.push(sampleString);
         stack.showAll();
     }
@@ -42,9 +48,24 @@ public class CustomQueue {
         int i=0;
         int j = 0;
         int[] newArray = new int[tokens.length];
-        while(i < tokens.length)    {
+        while(i < tokens.length - 1)    {
             if (tokens[i] == "+") {
                 int result = Integer.parseInt(tokens[i-1]) + Integer.parseInt(tokens[i-2]);
+                newArray[j]=result;
+                j++;
+            }
+            else if (tokens[i] == "-") {
+                int result = Integer.parseInt(tokens[i-1]) - Integer.parseInt(tokens[i-2]);
+                newArray[j]=result;
+                j++;
+            }
+            else if (tokens[i] == "*") {
+                int result = Integer.parseInt(tokens[i-1]) * Integer.parseInt(tokens[i-2]);
+                newArray[j]=result;
+                j++;
+            }
+            else if (tokens[i] == "/") {
+                int result = Integer.parseInt(tokens[i-1]) / Integer.parseInt(tokens[i-2]);
                 newArray[j]=result;
                 j++;
             }
@@ -56,7 +77,7 @@ public class CustomQueue {
     public String[] convertToStringArray(String tokens) {
        int i = 0;
         String[] newArray = new String[tokens.length()];
-        parse = new StringTokenizer(tokens,"");
+        parse = new StringTokenizer(tokens," ");
 
         while(parse.hasMoreTokens())    {
                newArray[i] = parse.nextToken();
