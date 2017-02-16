@@ -21,7 +21,6 @@ public class CustomQueue {
     public static void main(String[] args)  {
 
         Scanner input = new Scanner(System.in);
-        String operator;
         CustomQueue customQueue = new CustomQueue();
         Stack stack = new Stack();
         displayClassInfo();
@@ -38,27 +37,26 @@ public class CustomQueue {
         }
         return intArray;
     }
-    public StringTokenizer getTokens(String tokens)    {
-        int i = 0;
-        int[] numericIntegers = new int[tokens.length()];
-        parse = new StringTokenizer(tokens," ");
-        while(parse.hasMoreTokens())    {
-            if(!parse.nextToken().equals("+") || !parse.nextToken().equals("-") || !parse.nextToken().equals("*") || !parse.nextToken().equals("/"))  {
-                numericIntegers[i] = Integer.parseInt(parse.nextToken());
-                i++;
-            }
-        }
-        return parse;
-    }
+
     public int[] convertToIntegers(String[] tokens) {
-        int[] newArray = new int[tokens.length()];
-
-
+        int i=0;
+        int j = 0;
+        int[] newArray = new int[tokens.length];
+        while(i < tokens.length)    {
+            if (tokens[i] == "+") {
+                int result = Integer.parseInt(tokens[i-1]) + Integer.parseInt(tokens[i-2]);
+                newArray[j]=result;
+                j++;
+            }
+            i++;
+        }
         return newArray;
-    }public String[] convertToStringArray(String tokens) {
+    }
+
+    public String[] convertToStringArray(String tokens) {
        int i = 0;
         String[] newArray = new String[tokens.length()];
-        parse = new StringTokenizer(tokens," ");
+        parse = new StringTokenizer(tokens,"");
 
         while(parse.hasMoreTokens())    {
                newArray[i] = parse.nextToken();
