@@ -23,10 +23,13 @@ public class CustomQueue {
         Scanner input = new Scanner(System.in);
         String operator;
         CustomQueue customQueue = new CustomQueue();
+        Stack stack = new Stack();
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation separated by a space");
         String sampleString = input.nextLine();
         customQueue.performCalculation(sampleString);
+        stack.push(sampleString);
+        stack.showAll();
     }
     public int[] processLine(String strings) {
         int[] intArray = new int[strings.length()];

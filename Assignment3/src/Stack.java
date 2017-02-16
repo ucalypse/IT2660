@@ -30,6 +30,11 @@ public class Stack {
         }
         return true;
     }
+    public void showAll()   {
+        for (int i =top; i >= 0; i--)   {
+            System.out.println(data[i].toString());
+        }
+    }
 
 }
 

@@ -32,6 +32,17 @@ public class Assignment3Test {
         assertEquals(test[2], "3");
         assertEquals(test[3], "4");
         assertEquals(test[4], "5");
+    }
+    @Test
+    public void pushInsertsString() {
+        Stack stack = new Stack();
+        String a = "a";
+        String b = "b";
+        String c = "c";
+        String d = "d";
+
+        stack.showAll();
+
 
     }
 
