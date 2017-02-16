@@ -48,6 +48,7 @@ public class CustomQueue {
         int i=0;
         int j = 0;
         int[] newArray = new int[tokens.length];
+        int returnValue;
         while(i < tokens.length - 1)    {
             if (tokens[i] == "+") {
                 int result = Integer.parseInt(tokens[i-1]) + Integer.parseInt(tokens[i-2]);
