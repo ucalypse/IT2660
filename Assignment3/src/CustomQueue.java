@@ -19,12 +19,14 @@ public class CustomQueue {
         System.out.println("Chapter 3 Exercise 21" + "\n");
     }
     public static void main(String[] args)  {
+
         Scanner input = new Scanner(System.in);
         String operator;
         CustomQueue customQueue = new CustomQueue();
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation separated by a space");
         String sampleString = input.nextLine();
+        customQueue.performCalculation(sampleString);
     }
     public int[] processLine(String strings) {
         int[] intArray = new int[strings.length()];
@@ -45,17 +47,16 @@ public class CustomQueue {
         }
         return parse;
     }
-    public int[] performCalculation(String tokens) {
-        int i = 0;
-        int[] numericIntegers = new int[tokens.length()];
+    public String[] performCalculation(String tokens) {
+       int i = 0;
+        String[] newArray = new String[tokens.length()];
         parse = new StringTokenizer(tokens," ");
+
         while(parse.hasMoreTokens())    {
-            if(!parse.nextToken().equals("+") && !parse.nextToken().equals("-") && !parse.nextToken().equals("*") && !parse.nextToken().equals("/"))  {
-                numericIntegers[i] = Integer.parseInt(parse.nextToken());
+               newArray[i] = parse.nextToken();
                 i++;
-            }
         }
-        return numericIntegers;
+        return newArray;
     }
 }
 

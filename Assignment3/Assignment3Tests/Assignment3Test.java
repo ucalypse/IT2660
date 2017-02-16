@@ -25,13 +25,13 @@ public class Assignment3Test {
     @Test
     public void performCalculationReturnsIntArray() {
         String testString = "1 2 3 4 5 + +";
-        int[] test = tester.performCalculation(testString);
+        String[] test = tester.performCalculation(testString);
 
-        assertEquals(test[0], 1);
-        assertEquals(test[1], 2);
-        assertEquals(test[2], 3);
-        assertEquals(test[3], 4);
-        assertEquals(test[4], 5);
+        assertEquals(test[0], "1");
+        assertEquals(test[1], "2");
+        assertEquals(test[2], "3");
+        assertEquals(test[3], "4");
+        assertEquals(test[4], "5");
 
     }
 
