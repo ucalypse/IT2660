@@ -20,8 +20,8 @@ public class Stack {
         data = new String[n];
     }
     public boolean push(String target) {
-        String newTarget;
-        int topLocation;
+    //    String newTarget;
+  //      int topLocation;
         if (top == size - 1) {
             return false;
         } else {
@@ -34,6 +34,15 @@ public class Stack {
         for (int i =top; i >= 0; i--)   {
             System.out.println(data[i].toString());
         }
+    }
+    public String pop()   {
+        String[] newArray = new String[data.length - 1];
+        String poppedValue = data[data.length - 1];
+        for (int i =0; i<newArray.length; i++)  {
+            newArray[i] = data[i];
+        }
+        data = newArray;
+        return poppedValue;
     }
 
 }

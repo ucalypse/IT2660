@@ -40,10 +40,23 @@ public class Assignment3Test {
         String b = "b";
         String c = "c";
         String d = "d";
-
+        stack.push(a);
+        stack.push(b);
+        stack.push(c);
+        stack.showAll();
+    }
+@Test
+    public void popPopsStringOffStack() {
+        Stack stack = new Stack();
+        String[] items = new String[] {"a", "b", "c","d"};
+    stack.push(items[0]);
+    stack.push(items[1]);
+    stack.push(items[2]);
+    stack.push(items[3]);
+              items=  stack.pop(items);
         stack.showAll();
 
-
+    assertEquals(items[3], "c");
     }
 
 }
