@@ -27,7 +27,7 @@ public class CustomQueue {
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation separated by a space");
         String sampleString = input.nextLine();
-        customQueue.performCalculation(sampleString);
+        customQueue.convertToStringArray(sampleString);
         stack.push(sampleString);
         stack.showAll();
     }
@@ -50,7 +50,12 @@ public class CustomQueue {
         }
         return parse;
     }
-    public String[] performCalculation(String tokens) {
+    public int[] convertToIntegers(String[] tokens) {
+        int[] newArray = new int[tokens.length()];
+
+
+        return newArray;
+    }public String[] convertToStringArray(String tokens) {
        int i = 0;
         String[] newArray = new String[tokens.length()];
         parse = new StringTokenizer(tokens," ");

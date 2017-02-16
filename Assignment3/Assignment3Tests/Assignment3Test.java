@@ -25,7 +25,7 @@ public class Assignment3Test {
     @Test
     public void performCalculationReturnsIntArray() {
         String testString = "1 2 3 4 5 + +";
-        String[] test = tester.performCalculation(testString);
+        String[] test = tester.convertToIntegers(testString);
 
         assertEquals(test[0], "1");
         assertEquals(test[1], "2");
@@ -53,10 +53,15 @@ public class Assignment3Test {
     stack.push(items[1]);
     stack.push(items[2]);
     stack.push(items[3]);
-              items=  stack.pop(items);
+    stack.pop();
         stack.showAll();
 
-    assertEquals(items[3], "c");
+    assertEquals(items[2], "c");
+    }
+    @Test
+    public void performOperationDealsWithOneOperator()  {
+        String operator = "+";
+
     }
 
 }
