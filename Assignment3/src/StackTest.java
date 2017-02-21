@@ -8,12 +8,12 @@ public class StackTest {
     @Test
     public void StackTest(){
         Stack stack = new Stack();
-        stack.push("1");
-        stack.push("2");
-        stack.push("3");
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
 
-        assertEquals("3", stack.pop());
-        assertEquals("2", stack.pop());
-        assertEquals("1", stack.pop());
+        assertEquals(3, stack.pop());
+        assertEquals(2, stack.pop());
+        assertEquals(1, stack.pop());
     }
 }

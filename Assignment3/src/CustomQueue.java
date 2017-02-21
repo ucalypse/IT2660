@@ -29,9 +29,9 @@ public class CustomQueue {
         Stack stack = new Stack();
         String [] newValues = customQueue.convertToStringArray(sampleString);
       //  int[] result = customQueue.convertToIntegers(newValues);
-        for (int i = 0; i<newValues.length; i++)    {
-            stack.push(newValues[i]);
-        }
+//        for (int i = 0; i<newValues.length; i++)    {
+//            stack.push(newValues[i]);
+//        }
        stack.showAll();
     }
 
