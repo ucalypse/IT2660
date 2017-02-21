@@ -14,11 +14,11 @@ public class Stack {
         size = 100;
         data = new String[100];
     }
-    public Stack(int n) {
-        top = -1;
-        size = 100;
-        data = new String[n];
-    }
+//    public Stack(int n) {
+//        top = -1;
+//        size = 100;
+//        data = new String[n];
+//    }
     public boolean push(String target) {
     //    String newTarget;
   //      int topLocation;
@@ -35,14 +35,14 @@ public class Stack {
             System.out.println(data[i].toString());
         }
     }
-    public String pop()   {
+    public int pop()   {
         String[] newArray = new String[data.length - 1];
         String poppedValue = data[data.length - 1];
         for (int i =0; i<newArray.length; i++)  {
             newArray[i] = data[i];
         }
         data = newArray;
-        return poppedValue;
+        return 0;
     }
 
 }

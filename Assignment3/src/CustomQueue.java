@@ -26,38 +26,37 @@ public class CustomQueue {
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation separated by a space");
         String sampleString = input.nextLine();
-        Stack stack = new Stack(sampleString.length());
+        Stack stack = new Stack();
         String [] newValues = customQueue.convertToStringArray(sampleString);
-        int[] result = customQueue.convertToIntegers(newValues);
-        for (int i=0; i< result.length; i++)    {
-            System.out.println(result[i]);
+      //  int[] result = customQueue.convertToIntegers(newValues);
+        for (int i = 0; i<newValues.length; i++)    {
+            stack.push(newValues[i]);
         }
-        stack.push(sampleString);
+       stack.showAll();
     }
 
     public int[] convertToIntegers(String[] tokens) {
         int i=0;
         int j = 0;
         int[] newArray = new int[tokens.length];
-        int returnValue;
-        while(i < tokens.length)    {
-
-            if (tokens[i] == "+") {
+        int[] resultArray = new int[tokens.length];
+        while(i < tokens.length-1)    {
+            if (tokens[i].equals("+")) {
                 int result = Integer.parseInt(tokens[i-1]) + Integer.parseInt(tokens[i-2]);
                 newArray[j]=result;
                 j++;
             }
-            else if (tokens[i] == "-") {
+            else if (tokens[i].equals("-")) {
                 int result = Integer.parseInt(tokens[i-1]) - Integer.parseInt(tokens[i-2]);
                 newArray[j]=result;
                 j++;
             }
-            else if (tokens[i] == "*") {
+            else if (tokens[i].equals("*")) {
                 int result = Integer.parseInt(tokens[i-1]) * Integer.parseInt(tokens[i-2]);
                 newArray[j]=result;
                 j++;
             }
-            else if (tokens[i] == "/") {
+            else if (tokens[i].equals("/")) {
                 int result = Integer.parseInt(tokens[i-1]) / Integer.parseInt(tokens[i-2]);
                 newArray[j]=result;
                 j++;
@@ -70,9 +69,7 @@ public class CustomQueue {
 
     public String[] convertToStringArray(String tokens) {
        int i = 0;
-
         parse = new StringTokenizer(tokens," ");
-
         String[] newArray = new String[parse.countTokens()];
         while(parse.hasMoreTokens())    {
                newArray[i] = parse.nextToken();
