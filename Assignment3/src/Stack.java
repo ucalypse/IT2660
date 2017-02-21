@@ -24,6 +24,10 @@ public class Stack {
     }
 
     public int pop() {
+        if(data.length == 0)    {
+            System.out.println("No values to pop");
+            System.exit(0);
+        }
         int poppedValue = data[data.length-1];
         int[] tempArray = new int[data.length - 1];
         for (int i = 0; i < data.length-1; i++) {

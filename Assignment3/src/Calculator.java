@@ -26,7 +26,13 @@ public class Calculator {
             } else if (token.equals("/")) {
                 int operand1 = stack.pop();
                 int operand2 = stack.pop();
-                stack.push(operand1 / operand2);
+                if (operand2 != 0) {
+                    stack.push(operand1 / operand2);
+                }
+                else    {
+                    System.out.println("Cannot divide by 0");
+                    System.exit(0);
+                }
             } else {
                 stack.push(Integer.parseInt(token));
             }

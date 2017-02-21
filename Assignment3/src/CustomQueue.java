@@ -18,14 +18,19 @@ public class CustomQueue {
         System.out.println("Due February 23, 2017     Spring 2017");
         System.out.println("Chapter 3 Exercise 21" + "\n");
     }
-    public static void main(String[] args)  {
-
+    public static void main(String[] args) {
+        int result;
         Scanner input = new Scanner(System.in);
         Calculator calculator = new Calculator();
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation");
         String sampleString = input.nextLine();
-       int result = calculator.performCalculation(sampleString);
+        try {
+            result = calculator.performCalculation(sampleString);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid Input");
+            result=0;
+        }
         System.out.println(result);
     }
 }
