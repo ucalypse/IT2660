@@ -21,18 +21,12 @@ public class CustomQueue {
     public static void main(String[] args)  {
 
         Scanner input = new Scanner(System.in);
-        CustomQueue customQueue = new CustomQueue();
-
+        Calculator calculator = new Calculator();
         displayClassInfo();
         System.out.println("Enter the expression in post-fixed notation separated by a space");
         String sampleString = input.nextLine();
-        Stack stack = new Stack();
-        String [] newValues = customQueue.convertToStringArray(sampleString);
-      //  int[] result = customQueue.convertToIntegers(newValues);
-//        for (int i = 0; i<newValues.length; i++)    {
-//            stack.push(newValues[i]);
-//        }
-       stack.showAll();
+       int result = calculator.performCalculation(sampleString);
+        System.out.println(result);
     }
 
     public int[] convertToIntegers(String[] tokens) {
