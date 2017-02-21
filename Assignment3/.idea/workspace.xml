@@ -19,10 +19,10 @@
       <file leaf-file-name="CustomQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CustomQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="425">
+              <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
               <folding>
-                <element signature="e#0#1004#0" expanded="true" />
+                <element signature="e#0#983#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -32,8 +32,8 @@
       <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="306">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="StackTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StackTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="145">
+              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -81,10 +81,10 @@
       <list>
         <option value="$PROJECT_DIR$/Assignment3Tests/Assignment3Test.java" />
         <option value="$PROJECT_DIR$/src/CustomQueueTest.java" />
-        <option value="$PROJECT_DIR$/src/StackTest.java" />
+        <option value="$PROJECT_DIR$/src/Stack.java" />
         <option value="$PROJECT_DIR$/src/Calculator.java" />
         <option value="$PROJECT_DIR$/src/CustomQueue.java" />
-        <option value="$PROJECT_DIR$/src/Stack.java" />
+        <option value="$PROJECT_DIR$/src/StackTest.java" />
       </list>
     </option>
   </component>
@@ -147,8 +147,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -158,49 +158,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.StackTest">
-    <configuration default="false" name="StackTest.StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Assignment3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StackTest" />
-      <option name="METHOD_NAME" value="StackTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="StackTest.CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Assignment3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StackTest" />
-      <option name="METHOD_NAME" value="CalculatorTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.StackTest.CalculatorTestUltimate">
     <configuration default="false" name="StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Assignment3" />
@@ -251,6 +209,48 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StackTest" />
       <option name="METHOD_NAME" value="CalculatorTestMultiplication" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StackTest.CalculatorTestAddition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Assignment3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StackTest" />
+      <option name="METHOD_NAME" value="CalculatorTestAddition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StackTest.CalculatorTestUltimate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Assignment3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StackTest" />
+      <option name="METHOD_NAME" value="CalculatorTestUltimate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -469,19 +469,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.StackTest.StackTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StackTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMinus" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMultiplication" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.StackTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMinus" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMultiplication" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestAddition" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestUltimate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StackTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMultiplication" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMinus" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StackTest.StackTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestUltimate" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StackTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestAddition" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMultiplication" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StackTest.CalculatorTestMinus" />
       </list>
     </recent_temporary>
   </component>
@@ -499,23 +499,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StackTest - 2017.02.21 at 09h 54m 08s.xml">
+    <history-entry file="StackTest - 2017.02.21 at 12h 50m 38s.xml">
       <configuration name="StackTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StackTest - 2017.02.21 at 09h 56m 29s.xml">
+    <history-entry file="StackTest - 2017.02.21 at 12h 51m 19s.xml">
       <configuration name="StackTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StackTest_CalculatorTest - 2017.02.21 at 09h 47m 40s.xml">
-      <configuration name="StackTest.CalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StackTest_CalculatorTest - 2017.02.21 at 09h 49m 02s.xml">
-      <configuration name="StackTest.CalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StackTest_CalculatorTest - 2017.02.21 at 09h 49m 39s.xml">
-      <configuration name="StackTest.CalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StackTest_CalculatorTest - 2017.02.21 at 09h 50m 01s.xml">
-      <configuration name="StackTest.CalculatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StackTest_CalculatorTest - 2017.02.21 at 09h 52m 23s.xml">
       <configuration name="StackTest.CalculatorTest" configurationId="JUnit" />
@@ -523,15 +511,27 @@
     <history-entry file="StackTest_CalculatorTest - 2017.02.21 at 09h 52m 30s.xml">
       <configuration name="StackTest.CalculatorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StackTest_CalculatorTestAddition - 2017.02.21 at 10h 01m 07s.xml">
+      <configuration name="StackTest.CalculatorTestAddition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StackTest_CalculatorTestAddition - 2017.02.21 at 12h 50m 57s.xml">
+      <configuration name="StackTest.CalculatorTestAddition" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="StackTest_CalculatorTestMinus - 2017.02.21 at 09h 55m 27s.xml">
       <configuration name="StackTest.CalculatorTestMinus" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StackTest_CalculatorTestMultiplication - 2017.02.21 at 09h 55m 43s.xml">
       <configuration name="StackTest.CalculatorTestMultiplication" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StackTest_CalculatorTestUltimate - 2017.02.21 at 12h 53m 55s.xml">
+      <configuration name="StackTest.CalculatorTestUltimate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StackTest_CalculatorTestUltimate - 2017.02.21 at 12h 55m 05s.xml">
+      <configuration name="StackTest.CalculatorTestUltimate" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -580,10 +580,48 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CustomQueue.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#983#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
-            <element signature="e#0#1004#0" expanded="true" />
+            <element signature="e#0#983#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -602,7 +640,7 @@
         <state relative-caret-position="697">
           <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
           <folding>
-            <element signature="e#0#1004#0" expanded="true" />
+            <element signature="e#0#983#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -621,7 +659,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#1004#0" expanded="true" />
+            <element signature="e#0#983#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -640,7 +678,7 @@
         <state relative-caret-position="425">
           <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding>
-            <element signature="e#0#1004#0" expanded="true" />
+            <element signature="e#0#983#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -660,7 +698,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#1004#0" expanded="true" />
+            <element signature="e#0#983#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -680,7 +718,7 @@
         <state relative-caret-position="935">
           <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
           <folding>
-            <element signature="e#0#1004#0" expanded="true" />
+            <element signature="e#0#983#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -705,25 +743,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/school-it2660-assignment2/chegg_answer1.java" />
-    <entry file="file://$PROJECT_DIR$/src/CustomQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#1004#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -732,10 +751,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#983#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StackTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="145">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

@@ -8,7 +8,7 @@ public class Calculator {
     Stack stack = new Stack();
 
     public int performCalculation(String input) {
-        StringTokenizer parse = new StringTokenizer(input, " ");
+        StringTokenizer parse = new StringTokenizer(input, "0123456789+-*/", true);
         while (parse.hasMoreTokens()) {
             String token = parse.nextToken();
             if (token.equals("+")) {

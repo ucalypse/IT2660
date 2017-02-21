@@ -23,7 +23,7 @@ public class CustomQueue {
         Scanner input = new Scanner(System.in);
         Calculator calculator = new Calculator();
         displayClassInfo();
-        System.out.println("Enter the expression in post-fixed notation separated by a space");
+        System.out.println("Enter the expression in post-fixed notation");
         String sampleString = input.nextLine();
        int result = calculator.performCalculation(sampleString);
         System.out.println(result);
