@@ -28,49 +28,6 @@ public class CustomQueue {
        int result = calculator.performCalculation(sampleString);
         System.out.println(result);
     }
-
-    public int[] convertToIntegers(String[] tokens) {
-        int i=0;
-        int j = 0;
-        int[] newArray = new int[tokens.length];
-        int[] resultArray = new int[tokens.length];
-        while(i < tokens.length-1)    {
-            if (tokens[i].equals("+")) {
-                int result = Integer.parseInt(tokens[i-1]) + Integer.parseInt(tokens[i-2]);
-                newArray[j]=result;
-                j++;
-            }
-            else if (tokens[i].equals("-")) {
-                int result = Integer.parseInt(tokens[i-1]) - Integer.parseInt(tokens[i-2]);
-                newArray[j]=result;
-                j++;
-            }
-            else if (tokens[i].equals("*")) {
-                int result = Integer.parseInt(tokens[i-1]) * Integer.parseInt(tokens[i-2]);
-                newArray[j]=result;
-                j++;
-            }
-            else if (tokens[i].equals("/")) {
-                int result = Integer.parseInt(tokens[i-1]) / Integer.parseInt(tokens[i-2]);
-                newArray[j]=result;
-                j++;
-            }
-            newArray[i] = Integer.parseInt(tokens[i]);
-            i++;
-        }
-        return newArray;
-    }
-
-    public String[] convertToStringArray(String tokens) {
-       int i = 0;
-        parse = new StringTokenizer(tokens," ");
-        String[] newArray = new String[parse.countTokens()];
-        while(parse.hasMoreTokens())    {
-               newArray[i] = parse.nextToken();
-                i++;
-        }
-        return newArray;
-    }
 }
 
 

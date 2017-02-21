@@ -7,11 +7,6 @@ Chapter 3 Exercise 21
 public class Stack {
     private int[] data = new int[0];
 
-    //    public Stack(int n) {
-//        top = -1;
-//        size = 100;
-//        data = new String[n];
-//    }
     public boolean push(int target) {
         int[] tempArray = new int[data.length + 1];
         for (int i = 0; i < data.length; i++) {
