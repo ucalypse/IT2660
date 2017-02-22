@@ -21,27 +21,32 @@ public class StackTest {
     @Test
     public void CalculatorTestAddition()    {
         Calculator calculator = new Calculator();
-        int result = calculator.performCalculation("12+");
+        int result = calculator.performCalculation("1 2 +");
         assertEquals(3,result);
     }@Test
     public void CalculatorTestMinus()    {
         Calculator calculator = new Calculator();
-        int result = calculator.performCalculation("12-");
+        int result = calculator.performCalculation("1 2 -");
         assertEquals(1,result);
     }@Test
     public void CalculatorTestMultiplication()    {
         Calculator calculator = new Calculator();
-        int result = calculator.performCalculation("23*");
+        int result = calculator.performCalculation("2 3 *");
         assertEquals(6,result);
     }@Test
     public void CalculatorTestDivision()    {
         Calculator calculator = new Calculator();
-        int result = calculator.performCalculation("24/");
+        int result = calculator.performCalculation("2 4 /");
         assertEquals(2,result);
     }@Test
     public void CalculatorTestUltimate()    {
         Calculator calculator = new Calculator();
-        int result = calculator.performCalculation("24/1-87+-");
+        int result = calculator.performCalculation("2 4 / 1 - 8 7 + -");
         assertEquals(16,result);
+    }@Test
+    public void CalculatorTestMultipleDigits()    {
+        Calculator calculator = new Calculator();
+        int result = calculator.performCalculation("2 4 / 1 - 18 7 + -");
+        assertEquals(26,result);
     }
 }
