@@ -5,18 +5,18 @@ Due March 9, Spring 2017
 Chapter 4 Exercise 27
  */
 public class LinkedList {
-    private Node h;
+    private Node temp;
 
     public LinkedList() {
-        h = new Node();
-        h.key="";
-        h.next= null;
+        temp = new Node();
+        temp.head= null;
+        temp.tail=null;
     }
 
     public Listing fetch(String targetKey)   {
-        Node p = h.next;
-        while(p != null && !(p.key.equals(targetKey)))  {
-            p = p.next;
+        Node p = temp.head;
+        while(p != null && !(p.listing.name.equals(targetKey)))  {
+            p = p.head;
         }
         if (p != null)  {
             return p.listing;
@@ -30,21 +30,21 @@ public class LinkedList {
             return false;
         }
         else {
-            n.next = h.next;
-            h.next = n;
+            n.head = temp.head;
+            temp.head = n;
             n.listing = newListing;
             return true;
         }
     }
     public boolean delete(String targetKey) {
-        Node q = h;
-        Node p = h.next;
+        Node q = temp;
+        Node p = temp.head;
         while (p != null && !(p.equals(targetKey))) {
             q = p;
-            p = p.next;
+            p = p.head;
         }
         if(p != null)   {
-            q.next = p.next;
+            q.head = p.head;
             return true;
         }
         else return false;
