@@ -14,12 +14,12 @@ public class LinkedList {
     }
 
     public Listing fetch(String targetKey)   {
-        Node p = temp.head;
-        while(p != null && !(p.listing.name.equals(targetKey)))  {
-            p = p.head;
+        Node node = temp.head;
+        while(node != null && !(node.listing.name.equals(targetKey)))  {
+            node = node.head;
         }
-        if (p != null)  {
-            return p.listing;
+        if (node != null)  {
+            return node.listing;
         }
         else return null;
     }
@@ -58,5 +58,10 @@ public class LinkedList {
             return false;
         }
         return true;
+    }
+    public void showAll()   {
+        while(temp != null)    {
+            System.out.println(temp.listing.toString());
+        }
     }
 }
