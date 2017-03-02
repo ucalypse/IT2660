@@ -42,6 +42,6 @@ public class LinkedListTests {
         linkedList.insert(listing2);
         linkedList.insert(listing3);
         //Need to figure out how to assert that the value was inserted
-        linkedList.showAll();
+        assertEquals(linkedList.head.next.next.listing.id, 3);
     }
 }

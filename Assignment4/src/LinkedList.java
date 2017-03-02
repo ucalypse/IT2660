@@ -5,15 +5,12 @@ Due March 9, Spring 2017
 Chapter 4 Exercise 27
  */
 public class LinkedList {
-    Node temp;
-    Node head;
+    public Node head;
     int count;
 
 
     public LinkedList() {
-        temp = new Node();
         head= null;
-        temp.next = null;
     }
 
     public Listing fetch(String targetKey)   {
@@ -29,17 +26,19 @@ public class LinkedList {
 
     public boolean insert(Listing newListing)   {
         Node newNode = new Node();
-        if(count == 0) {
+        newNode.listing = newListing;
+        Node currentNode = head;
+
+        if (head == null)   {
             head = newNode;
             return true;
         }
-        else    {
-            head = temp;
-            newNode.next = temp;
-            newNode.listing = newListing;
-            count ++;
-            return true;
+       while(currentNode.next != null)
+       {
+           currentNode = currentNode.next;
         }
+        currentNode.next = newNode;
+         return false;
     }
 //    public boolean delete(String targetKey) {
 //        Node q = temp;
@@ -65,10 +64,11 @@ public class LinkedList {
 //        return true;
 //    }
     public void showAll()   {
+        Node temp;
         temp = head;
         while(temp != null) {
-
             System.out.println(temp.listing.toString());
+            temp = temp.next;
         }
     }
 }
