@@ -5,7 +5,6 @@ Due March 9, Spring 2017
 Chapter 4 Exercise 27
  */
 public class Node {
-    Node head;
-    Node tail;
     Listing listing;
+    Node next;
 }

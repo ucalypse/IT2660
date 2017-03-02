@@ -5,46 +5,51 @@ Due March 9, Spring 2017
 Chapter 4 Exercise 27
  */
 public class LinkedList {
-    private Node temp;
+    Node temp;
+    Node head;
+    Node tail;
+    int count;
+
 
     public LinkedList() {
         temp = new Node();
-        temp.head= null;
-        temp.tail=null;
+        head= null;
+        tail = null;
+        temp.next = null;
     }
 
-    public Listing fetch(String targetKey)   {
-        Node node = temp.head;
-        while(node != null && !(node.listing.name.equals(targetKey)))  {
-            node = node.head;
-        }
-        if (node != null)  {
-            return node.listing;
-        }
-        else return null;
-    }
+//    public Listing fetch(String targetKey)   {
+//        Node node = head;
+//        while(node != null && !(node.listing.name.equals(targetKey)))  {
+//            node = head;
+//        }
+//        if (node != null)  {
+//            return node.listing;
+//        }
+//        else return null;
+//    }
 
     public boolean insert(Listing newListing)   {
-        Node n = new Node();
-        if (n == null)  {
-            return false;
+        Node newNode = new Node();
+        if(count == 0) {
+            tail = newNode;
         }
-        else {
-            n.head = temp.head;
-            temp.head = n;
-            n.listing = newListing;
+            head = newNode;
+            newNode.next = null;
+            newNode.listing = newListing;
+            count ++;
             return true;
         }
     }
     public boolean delete(String targetKey) {
         Node q = temp;
-        Node p = temp.head;
-        while (p != null && !(p.equals(targetKey))) {
+        Node p = head;
+        while (p != null && !(p.listing.name.equals(targetKey))) {
             q = p;
-            p = p.head;
+            p = head;
         }
         if(p != null)   {
-            q.head = p.head;
+            head = p.head;
             return true;
         }
         else return false;
