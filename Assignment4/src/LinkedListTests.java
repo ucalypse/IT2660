@@ -18,7 +18,7 @@ public class LinkedListTests {
         linkedList.insert(listing1);
         linkedList.insert(listing2);
         linkedList.insert(listing3);
-       Listing test = linkedList.fetch(listing2.name);
+        Listing test = linkedList.fetch(listing2.name);
         assertEquals(2, test.id);
         System.out.println(test.name);
     }
@@ -30,7 +30,7 @@ public class LinkedListTests {
         linkedList.insert(listing1);
         linkedList.insert(listing2);
         linkedList.insert(listing3);
-        linkedList.delete(listing1.name);
+     //   linkedList.delete(listing1.name);
         linkedList.showAll();
     }
     @Test
