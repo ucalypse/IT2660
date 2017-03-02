@@ -14,14 +14,18 @@ public class LinkedList {
     }
 
     public Listing fetch(String targetKey)   {
-        Node node = head;
-        while(node != null && !(node.listing.name.equals(targetKey)))  {
-            node = head;
+        Node currentNode = head;
+        if (currentNode == null) {
+            System.out.println("No Records to fetch");
+            System.exit(0);
         }
-        if (node != null)  {
-            return node.listing;
+        while(currentNode != null) {
+            if (currentNode.listing.name.equals(targetKey))    {
+            return currentNode.listing;
+            }
+            currentNode = currentNode.next;
         }
-        else return null;
+        return currentNode.listing;
     }
 
     public boolean insert(Listing newListing)   {
