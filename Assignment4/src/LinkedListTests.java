@@ -30,7 +30,7 @@ public class LinkedListTests {
         linkedList.insert(listing1);
         linkedList.insert(listing2);
         linkedList.insert(listing3);
-     //   linkedList.delete(listing1.name);
+        linkedList.delete(listing1.name);
         linkedList.showAll();
     }
     @Test
@@ -41,7 +41,7 @@ public class LinkedListTests {
         linkedList.insert(listing1);
         linkedList.insert(listing2);
         linkedList.insert(listing3);
-        //Need to figure out how to assert that the value was inserted
+        //Need to figure out how to assert that the value was inserted, prob just gonna manually test
         assertEquals(linkedList.head.next.next.listing.id, 3);
     }
 }

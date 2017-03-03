@@ -35,6 +35,7 @@ public class LinkedList {
 
         if (head == null)   {
             head = newNode;
+            System.out.println(newNode.listing.name + " inserted successfully");
             return true;
         }
        while(currentNode.next != null)
@@ -42,6 +43,7 @@ public class LinkedList {
            currentNode = currentNode.next;
         }
         currentNode.next = newNode;
+        System.out.println(newNode.listing.name + " inserted successfully");
          return false;
     }
     public boolean delete(String targetKey) {
@@ -57,10 +59,12 @@ public class LinkedList {
             if(currentNode.listing.name.equals(targetKey))  {
                 if(previousNode == null)    {
                     head = currentNode.next;
+                    System.out.println(targetKey + " deleted successfully");
                     break;
                 }
                 else {
                     previousNode.next = currentNode.next;
+                    System.out.println(targetKey + " deleted successfully");
                 }
             }
             previousNode = currentNode;
@@ -69,15 +73,23 @@ public class LinkedList {
         return true;
     }
 
-//    public boolean update(String targetKey, Listing newListing) {
-//        if (delete(targetKey) == false) {
-//            return false;
-//        }
-//        else if (insert(newListing) == false)   {
-//            return false;
-//        }
-//        return true;
-//    }
+    public boolean update(String targetKey, Listing newListing) {
+       Node currentNode = head;
+       if(head == null) {
+           System.out.println("No students in list");
+           return false;
+       }
+       while(currentNode != null)   {
+           if (currentNode.listing.name.equals(targetKey))  {
+               currentNode.listing.name = newListing.name;
+               currentNode.listing.id = newListing.id;
+               currentNode.listing.gpa = newListing.gpa;
+               System.out.println(targetKey + " updated successfully to " + currentNode.listing.name + "\n");
+           }
+           currentNode = currentNode.next;
+       }
+       return true;
+    }
     public void showAll()   {
         Node temp;
         temp = head;

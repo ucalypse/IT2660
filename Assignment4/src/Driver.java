@@ -7,7 +7,8 @@ Chapter 4 Exercise 27
 import java.util.Scanner;
 public class Driver {
     public static void main(String[] args)  {
-        String studentName;
+        displayClassInfo();
+        String studentName, updateStudent;
         int studentId;
         int choice = 0;
         double studentGpa;
@@ -39,7 +40,15 @@ public class Driver {
                 linkedList.delete(deleteStudent);
             }
             if (choice == 4) {
-
+                System.out.println("Enter student's name that you wish to update");
+                updateStudent = input.next();
+                System.out.println("Enter new Student's name");
+                studentName = scanner.nextLine();
+                System.out.println("Enter new Stuent's ID");
+                studentId = scanner.nextInt();
+                System.out.println("Enter new Student's G.P.A.");
+                studentGpa = input.nextDouble();
+                linkedList.update(updateStudent, new Listing(studentName, studentId, studentGpa));
             }
             if (choice == 5) {
                 linkedList.showAll();
@@ -53,6 +62,12 @@ public class Driver {
                 "\t\t4 to update a student's information\n" +
                 "\t\t5 to output all the student information\n" +
                 "\t\t6 to exit the program");
+    }
+    public static void displayClassInfo() {
+        System.out.println("Donald Davis");
+        System.out.println("IT 2660 Data Structures and Algorithms, CRN 13907,");
+        System.out.println("Due March 9, 2017     Spring 2017");
+        System.out.println("Chapter 4 Exercise 27" + "\n");
     }
 
 }
