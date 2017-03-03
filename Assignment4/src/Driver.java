@@ -34,7 +34,9 @@ public class Driver {
                 System.out.println(studentOutput.name + "\n" + studentOutput.id + "\n" + studentOutput.gpa);
             }
             if (choice == 3) {
-
+                System.out.println("Enter the student name you wish to delete");
+                String deleteStudent = scanner.nextLine();
+                linkedList.delete(deleteStudent);
             }
             if (choice == 4) {
 

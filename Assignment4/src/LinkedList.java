@@ -6,13 +6,11 @@ Chapter 4 Exercise 27
  */
 public class LinkedList {
     public Node head;
-    int count;
-
 
     public LinkedList() {
         head= null;
     }
-
+//fetch method
     public Listing fetch(String targetKey)   {
         Node currentNode = head;
         if (currentNode == null) {
@@ -25,9 +23,11 @@ public class LinkedList {
             }
             currentNode = currentNode.next;
         }
-        return currentNode.listing;
+        System.out.println("No Records found");
+        System.exit(0);
+        return new Listing("",0,0);
     }
-
+//insert
     public boolean insert(Listing newListing)   {
         Node newNode = new Node();
         newNode.listing = newListing;
@@ -44,19 +44,30 @@ public class LinkedList {
         currentNode.next = newNode;
          return false;
     }
-//    public boolean delete(String targetKey) {
-//        Node q = temp;
-//        Node p = head;
-//        while (p != null && !(p.listing.name.equals(targetKey))) {
-//            q = p;
-//            p = head;
-//        }
-//        if(p != null)   {
-//            head = p.head;
-//            return true;
-//        }
-//        else return false;
-//    }
+    public boolean delete(String targetKey) {
+        Node currentNode = head;
+        Node previousNode = null;
+
+        if (head == null)   {
+            System.out.println("No Students In List");
+            return false;
+        }
+        while(currentNode != null)
+        {//nested if to detect all possible node deletions
+            if(currentNode.listing.name.equals(targetKey))  {
+                if(previousNode == null)    {
+                    head = currentNode.next;
+                    break;
+                }
+                else {
+                    previousNode.next = currentNode.next;
+                }
+            }
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        return true;
+    }
 
 //    public boolean update(String targetKey, Listing newListing) {
 //        if (delete(targetKey) == false) {
@@ -71,7 +82,7 @@ public class LinkedList {
         Node temp;
         temp = head;
         while(temp != null) {
-            System.out.println(temp.listing.toString());
+            System.out.println("Name: " + temp.listing.name + "\n" + "ID: " + temp.listing.id + "\n" + "G.P.A: " + temp.listing.gpa + "\n");
             temp = temp.next;
         }
     }
