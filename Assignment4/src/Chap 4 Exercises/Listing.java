@@ -1,5 +1,8 @@
-/**
- * Created by Dada on 2/28/2017.
+/*
+Donald Davis
+IT 2660 Data Structures & Algorithms CRN 13907
+Due March 9, Spring 2017
+Chapter 4 Exercise 27
  */
 public class Listing {
     String name;
