@@ -32,12 +32,19 @@ public class Driver {
                 System.out.println("Enter the student name");
                 String fetchStudent = scanner.nextLine();
                 Listing studentOutput = linkedList.fetch(fetchStudent);
-                System.out.println(studentOutput.name + "\n" + studentOutput.id + "\n" + studentOutput.gpa);
+                if (studentOutput != null) {
+                    System.out.println(studentOutput.name + "\n" + studentOutput.id + "\n" + studentOutput.gpa);
+                } else {
+                    System.out.println("No Records Found");
+                }
             }
             if (choice == 3) {
                 System.out.println("Enter the student name you wish to delete");
                 String deleteStudent = scanner.nextLine();
-                linkedList.delete(deleteStudent);
+
+                if (linkedList.delete(deleteStudent) == false)  {
+                    System.out.println("No students in list");
+                }
             }
             if (choice == 4) {
                 System.out.println("Enter student's name that you wish to update");

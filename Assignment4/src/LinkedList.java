@@ -14,8 +14,7 @@ public class LinkedList {
     public Listing fetch(String targetKey)   {
         Node currentNode = head;
         if (currentNode == null) {
-            System.out.println("No Records to fetch");
-            System.exit(0);
+            return null;
         }
         while(currentNode != null) {
             if (currentNode.listing.name.equals(targetKey))    {
@@ -23,16 +22,14 @@ public class LinkedList {
             }
             currentNode = currentNode.next;
         }
-        System.out.println("No Records found");
-        System.exit(0);
-        return new Listing("",0,0);
+        return null;
     }
 //insert
     public boolean insert(Listing newListing)   {
         Node newNode = new Node();
         newNode.listing = newListing;
         Node currentNode = head;
-
+//Checking if there is a item in the list already
         if (head == null)   {
             head = newNode;
             System.out.println(newNode.listing.name + " inserted successfully");
@@ -46,12 +43,12 @@ public class LinkedList {
         System.out.println(newNode.listing.name + " inserted successfully");
          return false;
     }
+    //delete method
     public boolean delete(String targetKey) {
         Node currentNode = head;
         Node previousNode = null;
 
         if (head == null)   {
-            System.out.println("No Students In List");
             return false;
         }
         while(currentNode != null)
@@ -76,7 +73,6 @@ public class LinkedList {
     public boolean update(String targetKey, Listing newListing) {
        Node currentNode = head;
        if(head == null) {
-           System.out.println("No students in list");
            return false;
        }
        while(currentNode != null)   {
