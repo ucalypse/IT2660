@@ -1,0 +1,9 @@
+Implement the perfect hased data structure
+discussed in this chapter and provide
+an application that demonstrates that it's 4
+basic operation methods function.  Your application
+should store nodes for a stadium ticket application 
+where the ticket numbers range from
+2000 to 100,000 for a 60,000 seat stadium.
+The ticket number will be the key field and
+the nodes will also store the purchaser's name.
