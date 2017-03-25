@@ -1,8 +1,9 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-
+/*
+Donald Davis
+IT 2660 Data Structures & Algorithms CRN 13907
+Due March 30, Spring 2017
+Chapter 5 Exercise 40
+ */
 public class Sales {
     Ticket[] tickets = new Ticket[98000];
     int counter = 0;
