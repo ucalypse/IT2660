@@ -4,20 +4,24 @@ import java.util.List;
 
 
 public class Sales {
-    List<Ticket> tickets = new ArrayList<>();
-    int counter;
+    Ticket[] tickets = new Ticket[98000];
+    int counter = 0;
+    int[] keys = new int[98000];
 
     public void addTicket(Ticket newTicket){
-        if (tickets == null)    {
-            counter = 1;
-        }
-        else    {
-            counter = tickets.size();
-        }
-        tickets.add(counter, newTicket);
+
+        keys[counter] = newTicket.seatNumber;
+        tickets[newTicket.seatNumber] = newTicket;
+        counter ++;
     }
 
-    public Ticket fetchTicket(int ticketIndex)    {
-       return tickets.get(ticketIndex);
+    public Ticket fetchTicket(int seatNumber)    {
+        int index;
+        for(int i = 0; i < keys.length; i++)   {
+            if(keys[i] == seatNumber)   {
+                return tickets[seatNumber];
+            }
+        }
+       return null;
     }
 }

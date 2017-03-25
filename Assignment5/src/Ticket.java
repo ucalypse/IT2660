@@ -3,9 +3,10 @@
  */
 public class Ticket {
     public String name;
-    public int index;
+    public int seatNumber;
 
-    public Ticket(String ticketName)  {
+    public Ticket(String ticketName, int number)  {
      name = ticketName;
+     seatNumber = number;
     }
 }

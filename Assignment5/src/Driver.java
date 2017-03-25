@@ -9,9 +9,8 @@ public class Driver {
 
     public static void main(String[] args)  {
 
-        Key key = new Key();
         Sales sales = new Sales();
-        sales.addTicket(new Ticket(""));
+       // sales.addTicket(new Ticket(""));
         System.out.println(sales.tickets);
     }
 }
