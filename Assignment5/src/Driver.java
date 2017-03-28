@@ -24,12 +24,12 @@ public class Driver {
             if (choice == 1) {
                 System.out.println("Enter name");
                 name = scanner.nextLine();
-                System.out.println("Enter seat number");
+                System.out.println("Enter ticket number");
                 seatNumber = scanner.nextInt();
                 sales.addTicket(new Ticket(name,seatNumber));
             }
             if (choice == 2) {
-                System.out.println("Enter the seat number");
+                System.out.println("Enter the ticket number");
                 int fetchTicket = scanner.nextInt();
                 Ticket ticketOutput = sales.fetchTicket(fetchTicket);
                 if (ticketOutput != null) {
@@ -38,14 +38,13 @@ public class Driver {
                     System.out.println("No Records Found");
                 }
             }
-//            if (choice == 3) {
-//                System.out.println("Enter the student name you wish to delete");
-//                String deleteStudent = scanner.nextLine();
-//
-//                if (linkedList.delete(deleteStudent) == false)  {
-//                    System.out.println("No students in list");
-//                }
-//            }
+            if (choice == 3) {
+                System.out.println("Enter the ticket number you wish to delete");
+                int deleteTicket = scanner.nextInt();
+                if (sales.deleteTicket(deleteTicket) == false)  {
+                    System.out.println("No students in list");
+                }
+            }
 //            if (choice == 4) {
 //                System.out.println("Enter student's name that you wish to update");
 //                updateStudent = input.next();
@@ -58,7 +57,7 @@ public class Driver {
 //                linkedList.update(updateStudent, new Listing(studentName, studentId, studentGpa));
 //            }
 //            if (choice == 5) {
-//                linkedList.showAll();
+//                sales.showAll();
 //            }
         }
        // sales.addTicket(new Ticket(""));

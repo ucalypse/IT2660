@@ -25,4 +25,35 @@ public class Sales {
         }
        return null;
     }
+
+    public boolean deleteTicket(int seatNumber) {
+        int[] keyCopy = new int[keys.length];
+        int secondCounter = 0;
+        if(tickets[seatNumber] != null) {
+            tickets[seatNumber] = null;
+        }
+        else    {
+            return false;
+        }
+        for (int i = 0; i < keys.length; i++) {
+            if (keys[i] != seatNumber) {
+                keyCopy[secondCounter] = keys[i];
+                secondCounter ++;
+            }
+
+        }
+        keys = keyCopy;
+        return true;
+    }
+
+    public void showAll()   {
+        int i = 0;
+        if (keys[i] == 0)   {
+            System.out.println("No ticket sales record");
+        }
+        while (keys[i] != 0)    {
+            System.out.println("Name: " + tickets[keys[i]].name + "\n" + "Seat Number: " + tickets[keys[i]].seatNumber + "\n");
+            i++;
+        }
+    }
 }
