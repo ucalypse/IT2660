@@ -40,17 +40,20 @@ public class Sales {
                 keyCopy[secondCounter] = keys[i];
                 secondCounter ++;
             }
-
         }
         keys = keyCopy;
         return true;
     }
 
+    public void updateTicket(Ticket newTicket, int oldNumber)  {
+       deleteTicket(oldNumber);
+       addTicket(newTicket);
+        System.out.println("Entry updated successfully!");
+    }
+
     public void showAll()   {
         int i = 0;
-        if (keys[i] == 0)   {
-            System.out.println("No ticket sales record");
-        }
+
         while (keys[i] != 0)    {
             System.out.println("Name: " + tickets[keys[i]].name + "\n" + "Seat Number: " + tickets[keys[i]].seatNumber + "\n");
             i++;

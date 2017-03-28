@@ -26,7 +26,10 @@ public class Driver {
                 name = scanner.nextLine();
                 System.out.println("Enter ticket number");
                 seatNumber = scanner.nextInt();
-                sales.addTicket(new Ticket(name,seatNumber));
+                if (seatNumber >= 2000 && seatNumber <= 100000) {
+                    sales.addTicket(new Ticket(name, seatNumber));
+                }
+                else System.out.println("Not a valid ticket number");
             }
             if (choice == 2) {
                 System.out.println("Enter the ticket number");
@@ -45,20 +48,18 @@ public class Driver {
                     System.out.println("No students in list");
                 }
             }
-//            if (choice == 4) {
-//                System.out.println("Enter student's name that you wish to update");
-//                updateStudent = input.next();
-//                System.out.println("Enter new Student's name");
-//                studentName = scanner.nextLine();
-//                System.out.println("Enter new Stuent's ID");
-//                studentId = scanner.nextInt();
-//                System.out.println("Enter new Student's G.P.A.");
-//                studentGpa = input.nextDouble();
-//                linkedList.update(updateStudent, new Listing(studentName, studentId, studentGpa));
-//            }
-//            if (choice == 5) {
-//                sales.showAll();
-//            }
+            if (choice == 4) {
+                System.out.println("Enter ticket number you wish to update");
+                int updateTicket = input.nextInt();
+                System.out.println("Enter new ticket holder's name");
+                String ticketName = scanner.nextLine();
+                System.out.println("Enter the new ticket holder's seat");
+                int newNumber = input.nextInt();
+                sales.updateTicket(new Ticket(ticketName, newNumber), updateTicket);
+            }
+            if (choice == 5) {
+                sales.showAll();
+            }
         }
        // sales.addTicket(new Ticket(""));
         System.out.println(sales.tickets);
