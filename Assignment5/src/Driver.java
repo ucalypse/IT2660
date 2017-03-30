@@ -45,7 +45,7 @@ public class Driver {
                 System.out.println("Enter the ticket number you wish to delete");
                 int deleteTicket = scanner.nextInt();
                 if (sales.deleteTicket(deleteTicket) == false)  {
-                    System.out.println("No students in list");
+                    System.out.println("No tickets in list");
                 }
             }
             if (choice == 4) {

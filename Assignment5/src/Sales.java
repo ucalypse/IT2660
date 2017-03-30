@@ -12,7 +12,7 @@ public class Sales {
     public void addTicket(Ticket newTicket){
 
         keys[counter] = newTicket.seatNumber;
-        tickets[newTicket.seatNumber] = newTicket;
+        tickets[newTicket.seatNumber-2000] = newTicket;
         counter ++;
     }
 
@@ -28,8 +28,8 @@ public class Sales {
     public boolean deleteTicket(int seatNumber) {
         int[] keyCopy = new int[keys.length];
         int secondCounter = 0;
-        if(tickets[seatNumber] != null) {
-            tickets[seatNumber] = null;
+        if(tickets[seatNumber-2000] != null) {
+            tickets[seatNumber-2000] = null;
         }
         else    {
             return false;
@@ -53,7 +53,7 @@ public class Sales {
     public void showAll()   {
         for(int i = 0; i<= counter; i++)    {
             if(keys[i] != 0) {
-                System.out.println("Name: " + tickets[keys[i]].name + "\n" + "Seat Number: " + tickets[keys[i]].seatNumber + "\n");
+                System.out.println("Name: " + tickets[keys[i]-2000].name + "\n" + "Seat Number: " + tickets[keys[i]-2000].seatNumber + "\n");
             }
         }
     }
