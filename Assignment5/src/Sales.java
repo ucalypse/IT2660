@@ -51,11 +51,10 @@ public class Sales {
     }
 
     public void showAll()   {
-        int i = 0;
-
-        while (keys[i] != 0)    {
-            System.out.println("Name: " + tickets[keys[i]].name + "\n" + "Seat Number: " + tickets[keys[i]].seatNumber + "\n");
-            i++;
+        for(int i = 0; i<= counter; i++)    {
+            if(keys[i] != 0) {
+                System.out.println("Name: " + tickets[keys[i]].name + "\n" + "Seat Number: " + tickets[keys[i]].seatNumber + "\n");
+            }
         }
     }
 }
