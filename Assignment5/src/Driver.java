@@ -1,8 +1,8 @@
 /*
 Donald Davis
 IT 2660 Data Structures & Algorithms CRN 13907
-Due March 30, Spring 2017
-Chapter 5 Exercise 40
+Due April 13, Spring 2017
+Chapter 6 Exercises 16 & 18
  */
 
 import java.util.Scanner;
