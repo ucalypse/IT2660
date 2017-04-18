@@ -19,7 +19,7 @@ public class Sales {
     public Ticket fetchTicket(int seatNumber)    {
         for(int i = 0; i < keys.length; i++)   {
             if(keys[i] == seatNumber)   {
-                return tickets[seatNumber];
+                return tickets[seatNumber-2000];
             }
         }
        return null;
