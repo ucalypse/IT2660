@@ -8,6 +8,8 @@ public class Driver {
     public static void main(String[] args)  {
         displayClassInfo();
 
+        BinarySearch binarySearch = new BinarySearch();
+
     }
 
     public static void displayClassInfo() {
