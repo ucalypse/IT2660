@@ -42,8 +42,15 @@ public class BinarySearch {
 
     public Node fetchStudent(int key)   {
         Node currentNode = root;
-        while ()
-        return new Node(0,"");
+        while (true)    {
+            if (currentNode.key == key) {
+                return currentNode;
+            }
+            else if (key < currentNode.key)    {
+                currentNode = currentNode.leftChild;
+            }
+            else currentNode = currentNode.rightChild;
+        }
     }
 
 }
