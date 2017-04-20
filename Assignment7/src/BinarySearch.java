@@ -35,9 +35,15 @@ public class BinarySearch {
                         return;
                     }
                 }
-            }
+                }
         }
 
+    }
+
+    public Node fetchStudent(int key)   {
+        Node currentNode = root;
+        while ()
+        return new Node(0,"");
     }
 
 }

@@ -37,4 +37,20 @@ public class SearchTests {
 
     }
 
+    @Test
+    public void fetchStudent_returns_correct_student()  {
+        Node testNode1 = new Node(10, "A");
+        Node testNode2 = new Node(4, "B");
+        Node testNode3 = new Node(7, "C");
+        Node testNode4 = new Node(15, "D");
+
+        binarySearch.addNode(testNode1);
+        binarySearch.addNode(testNode2);
+        binarySearch.addNode(testNode3);
+        binarySearch.addNode(testNode4);
+
+        assertEquals("B",binarySearch.fetchStudent(4).name);
+
+    }
+
 }
