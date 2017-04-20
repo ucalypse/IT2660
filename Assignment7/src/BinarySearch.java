@@ -7,8 +7,7 @@ Chapter 7 Exercise 31
 public class BinarySearch {
     Node root;
 
-    public void addNode(int key, String name) {
-        Node newNode = new Node(key, name);
+    public void addNode(Node newNode) {
         if (root == null) {
             root = newNode;
         } else {
@@ -16,7 +15,14 @@ public class BinarySearch {
             Node parent;
             while (true) {
                 parent = checkNode;
-                if (key < checkNode.key) {
+                if (newNode.key > root.key) {
+                    checkNode = checkNode.rightChild;
+                    if (checkNode == null) {
+                        parent.rightChild = newNode;
+                        return;
+                    }
+                }
+                if (newNode.key < checkNode.key) {
                     checkNode = checkNode.leftChild;
                     if (checkNode == null) {
                         parent.leftChild = newNode;

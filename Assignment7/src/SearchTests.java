@@ -14,7 +14,7 @@ public class SearchTests {
     @Test
     public void addNode_becomes_root()  {
         node = new Node(1, "Donny");
-        binarySearch.addNode(node.key, node.name);
+        binarySearch.addNode(node);
 
         assertEquals(binarySearch.root.key, node.key);
 
@@ -24,11 +24,16 @@ public class SearchTests {
         Node testNode1 = new Node(10, "Donny");
         Node testNode2 = new Node(4, "Donny");
         Node testNode3 = new Node(7, "Donny");
-        binarySearch.addNode(testNode1.key, node.name);
-        binarySearch.addNode(testNode2.key, node.name);
-        binarySearch.addNode(testNode3.key, node.name);
+        Node testNode4 = new Node(15, "Donny");
+        binarySearch.addNode(testNode1);
+        binarySearch.addNode(testNode2);
+        binarySearch.addNode(testNode3);
+        binarySearch.addNode(testNode4);
 
         assertEquals(binarySearch.root.leftChild.key, 4);
+        assertEquals(binarySearch.root.leftChild.rightChild.key, 7);
+        assertEquals(binarySearch.root.rightChild.key, 15);
+
 
     }
 
