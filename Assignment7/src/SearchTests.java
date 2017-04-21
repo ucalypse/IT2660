@@ -50,6 +50,7 @@ public class SearchTests {
         binarySearch.addNode(testNode4);
 
         assertEquals("B",binarySearch.fetchStudent(4).name);
+        assertEquals("D",binarySearch.fetchStudent(15).name);
 
     }
 
