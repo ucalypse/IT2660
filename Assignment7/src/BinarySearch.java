@@ -59,12 +59,13 @@ public class BinarySearch {
             System.out.println("Student Name: " + currentNode.name + "\nStudent ID: " + currentNode.key);
             if (currentNode.leftChild != null) {
                 currentNode = currentNode.leftChild;
-                showAllRecords();
+
             }
             else if (currentNode.rightChild != null)    {
                 currentNode = currentNode.rightChild;
                 showAllRecords();
             }
+            else currentNode = null;
         }
     }
 
