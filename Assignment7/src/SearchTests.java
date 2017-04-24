@@ -43,15 +43,31 @@ public class SearchTests {
         Node testNode2 = new Node(4, "B");
         Node testNode3 = new Node(7, "C");
         Node testNode4 = new Node(15, "D");
+        Node testNode5 = new Node(17, "I");
 
         binarySearch.addNode(testNode1);
         binarySearch.addNode(testNode2);
         binarySearch.addNode(testNode3);
         binarySearch.addNode(testNode4);
+        binarySearch.addNode(testNode5);
 
         assertEquals("B",binarySearch.fetchStudent(4).name);
         assertEquals("D",binarySearch.fetchStudent(15).name);
+        assertEquals("I",binarySearch.fetchStudent(17).name);
 
+    }
+
+    @Test
+    public void deleteStudent_deletes_student() {
+        binarySearch.addNode(new Node(10, "a"));
+        binarySearch.addNode(new Node(17, "b"));
+        binarySearch.addNode(new Node(4, "c"));
+        binarySearch.addNode(new Node(7, "d"));
+        binarySearch.addNode(new Node(20, "e"));
+        binarySearch.addNode(new Node(14, "f"));
+        System.out.println(binarySearch.fetchStudent(4).name);
+
+        assertEquals("f",binarySearch.fetchStudent(17).leftChild.name);
     }
 
 }

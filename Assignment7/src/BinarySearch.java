@@ -15,7 +15,7 @@ public class BinarySearch {
             Node parent;
             while (true) {
                 parent = checkNode;
-                if (newNode.key > root.key) {
+                if (newNode.key > checkNode.key) {
                     checkNode = checkNode.rightChild;
                     if (checkNode == null) {
                         parent.rightChild = newNode;
@@ -28,13 +28,14 @@ public class BinarySearch {
                         parent.leftChild = newNode;
                         return;
                     }
-                } else {
-                    checkNode = checkNode.rightChild;
-                    if (checkNode == null) {
-                        parent.rightChild = newNode;
-                        return;
-                    }
-                }
+                } //else {
+//                    checkNode = checkNode.rightChild;
+//                    if (checkNode == null) {
+//                        parent.rightChild = newNode;
+//                       // checkNode = newNode;
+//                        return;
+//                    }
+//                }
                 }
         }
 
@@ -59,7 +60,6 @@ public class BinarySearch {
             System.out.println("Student Name: " + currentNode.name + "\nStudent ID: " + currentNode.key);
             if (currentNode.leftChild != null) {
                 currentNode = currentNode.leftChild;
-
             }
             else if (currentNode.rightChild != null)    {
                 currentNode = currentNode.rightChild;
