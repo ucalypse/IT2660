@@ -7,6 +7,7 @@ Chapter 7 Exercise 31
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class SearchTests {
     Node node;
@@ -85,6 +86,58 @@ public class SearchTests {
         binarySearch.addNode(testNode4);
         binarySearch.addNode(testNode5);
         binarySearch.showAllRecords(testNode1);
+
+    }
+        @Test
+        public void return_parent_finds_correct_parent() {
+        Node testNode1 = new Node(10, "A");
+        Node testNode2 = new Node(4, "B");
+        Node testNode3 = new Node(7, "C");
+        Node testNode4 = new Node(15, "D");
+        Node testNode5 = new Node(17, "I");
+
+        binarySearch.addNode(testNode1);
+        binarySearch.addNode(testNode2);
+        binarySearch.addNode(testNode3);
+        binarySearch.addNode(testNode4);
+        binarySearch.addNode(testNode5);
+
+        assertEquals(4, binarySearch.getParent(7).key);
+        assertEquals(15, binarySearch.getParent(17).key);
+
+    }
+
+
+        @Test
+        public void deleteNode_deletes_correct_value() {
+        Node testNode1 = new Node(10, "A");
+        Node testNode2 = new Node(4, "B");
+        Node testNode3 = new Node(7, "C");
+        Node testNode4 = new Node(15, "D");
+        Node testNode5 = new Node(17, "I");
+        Node testNode6 = new Node(13, "J");
+        Node testNode7 = new Node(2, "K");
+        Node testNode8 = new Node(14, "L");
+
+        binarySearch.addNode(testNode1);
+        binarySearch.addNode(testNode2);
+        binarySearch.addNode(testNode3);
+        binarySearch.addNode(testNode4);
+        binarySearch.addNode(testNode5);
+        binarySearch.addNode(testNode6);
+        binarySearch.addNode(testNode7);
+        binarySearch.addNode(testNode8);
+
+        binarySearch.deleteNode(testNode4.key);
+        binarySearch.deleteNode(testNode3.key);
+        binarySearch.deleteNode(testNode6.key);
+        binarySearch.deleteNode(testNode2.key);
+        assertEquals(17, testNode1.rightChild.key);
+        assertNull(testNode2.rightChild);
+        assertEquals(2,testNode1.leftChild.key);
+        assertEquals(14, testNode5.leftChild.key);
+
+
 
     }
 

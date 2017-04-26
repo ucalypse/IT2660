@@ -59,24 +59,87 @@ public class BinarySearch {
     }
 
     public boolean showAllRecords(Node currentNode) {
-//        while (currentNode != null) {
-//            System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n");
-//            if (currentNode.leftChild != null)  {
-//                currentNode = currentNode.leftChild;
-//                showAllRecords();
-//            }
-//            if (currentNode.rightChild != null) {
-//                currentNode = currentNode.rightChild;
-//                showAllRecords();
-//            }
-//        }
         if (currentNode == null) {
             return true;
         }
         System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n");
+        //using recursion
         showAllRecords(currentNode.leftChild);
         showAllRecords(currentNode.rightChild);
         return false;
+    }
+
+    public Node getParent(int key)  {
+        Node currentNode = root;
+        parent = currentNode;
+        while (true) {
+            if (currentNode.key == key) {
+                return parent;
+            } else if (key < currentNode.key) {
+                parent = currentNode;
+                currentNode = currentNode.leftChild;
+            } else {
+                parent = currentNode;
+                currentNode = currentNode.rightChild;
+            }
+        }
+    }
+
+    public void deleteNode(int key) {
+        Node currentNode = root;
+        while (true) {
+            if (currentNode.key == key) {
+                //handles the case when deletedNode has 2 children
+                if (currentNode.rightChild != null && currentNode.leftChild != null && currentNode.key < getParent(key).key)    {
+                    getParent(currentNode.key).leftChild = currentNode.rightChild;
+                    currentNode.rightChild.leftChild = currentNode.leftChild;
+                    break;
+
+                }
+                if (currentNode.rightChild != null && currentNode.leftChild != null && currentNode.key > getParent(key).key)    {
+                    getParent(currentNode.key).rightChild = currentNode.rightChild;
+                    currentNode.rightChild.leftChild = currentNode.leftChild;
+                    break;
+
+                }
+                //handles the case when deletedNode has no children
+                if(currentNode.leftChild == null && currentNode.rightChild == null && currentNode.key < getParent(key).key)   {
+                    getParent(key).leftChild = null;
+                    break;
+                }
+                if (currentNode.leftChild == null && currentNode.rightChild == null && currentNode.key > getParent(key).key)    {
+                   getParent(key).rightChild = null;
+                   break;
+                }
+                //handles case when there is only 1 child
+                if (currentNode.leftChild == null && currentNode.key < getParent(key).key)  {
+                    currentNode = currentNode.rightChild;
+                    getParent(key).leftChild = currentNode;
+                    break;
+                }
+                if (currentNode.leftChild == null && currentNode.key > getParent(key).key)  {
+                    currentNode = currentNode.rightChild;
+                    getParent(key).rightChild = currentNode;
+                    break;
+                }
+                if (currentNode.rightChild == null && currentNode.key < getParent(key).key)  {
+                    currentNode = currentNode.leftChild;
+                    getParent(key).leftChild = currentNode;
+                    break;
+                }
+                if (currentNode.rightChild == null && currentNode.key > getParent(key).key)  {
+                    currentNode = currentNode.leftChild;
+                    getParent(key).rightChild = currentNode;
+                    break;
+                }
+            }
+            else if (key < currentNode.key) {
+                currentNode = currentNode.leftChild;
+            }
+            else {
+                currentNode = currentNode.rightChild;
+            }
+        }
     }
 
 
