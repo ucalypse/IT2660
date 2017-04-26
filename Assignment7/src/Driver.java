@@ -49,7 +49,7 @@ public class Driver {
 
             }
             if (choice == 5) {
-                binarySearch.showAllRecords();
+                binarySearch.showAllRecords(new Node(3, "t"));
             }
         }
 

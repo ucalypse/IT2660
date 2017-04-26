@@ -10,10 +10,12 @@ public class BinarySearch {
     Node parent;
 
     public void addNode(Node newNode) {
+        //1st node entered becomes root
         if (root == null) {
             root = newNode;
         } else {
             checkNode = root;
+            //infinite loop to take the place of recursion, which I prefer not to use if at all possible as it is hard to read
             while (true) {
                 parent = checkNode;
                 if (newNode.key > checkNode.key) {
@@ -24,14 +26,15 @@ public class BinarySearch {
                     }
                 }
                 if (newNode.key < checkNode.key) {
+                    //added this to prevent null reference when its not the 1st time through the loop
                     parent = checkNode;
                     checkNode = checkNode.leftChild;
                     if (checkNode == null) {
                         parent.leftChild = newNode;
                         return;
                     }
-                }
-                else {
+                } else {
+                    //added this to prevent null reference when its not the 1st time through the loop
                     parent = checkNode;
                     checkNode = checkNode.rightChild;
                     if (checkNode == null) {
@@ -39,37 +42,42 @@ public class BinarySearch {
                         return;
                     }
                 }
-                }
+            }
         }
 
     }
 
-    public Node fetchStudent(int key)   {
+    public Node fetchStudent(int key) {
         Node currentNode = root;
-        while (true)    {
+        while (true) {
             if (currentNode.key == key) {
                 return currentNode;
-            }
-            else if (key < currentNode.key)    {
+            } else if (key < currentNode.key) {
                 currentNode = currentNode.leftChild;
-            }
-            else currentNode = currentNode.rightChild;
+            } else currentNode = currentNode.rightChild;
         }
     }
 
-    public void showAllRecords()    {
-        Node currentNode = root;
-        while (currentNode != null) {
-            System.out.println("Student Name: " + currentNode.name + "\nStudent ID: " + currentNode.key);
-            if (currentNode.leftChild != null) {
-                currentNode = currentNode.leftChild;
-            }
-            else if (currentNode.rightChild != null)    {
-                currentNode = currentNode.rightChild;
-                showAllRecords();
-            }
-            else currentNode = null;
+    public boolean showAllRecords(Node currentNode) {
+//        while (currentNode != null) {
+//            System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n");
+//            if (currentNode.leftChild != null)  {
+//                currentNode = currentNode.leftChild;
+//                showAllRecords();
+//            }
+//            if (currentNode.rightChild != null) {
+//                currentNode = currentNode.rightChild;
+//                showAllRecords();
+//            }
+//        }
+        if (currentNode == null) {
+            return true;
         }
+        System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n");
+        showAllRecords(currentNode.leftChild);
+        showAllRecords(currentNode.rightChild);
+        return false;
     }
+
 
 }

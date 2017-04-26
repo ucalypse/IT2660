@@ -71,4 +71,21 @@ public class SearchTests {
         assertEquals("f",binarySearch.fetchStudent(17).leftChild.name);
     }
 
+    @Test
+        public void showAllRecordsTest() {
+        Node testNode1 = new Node(10, "A");
+        Node testNode2 = new Node(4, "B");
+        Node testNode3 = new Node(7, "C");
+        Node testNode4 = new Node(15, "D");
+        Node testNode5 = new Node(17, "I");
+
+        binarySearch.addNode(testNode1);
+        binarySearch.addNode(testNode2);
+        binarySearch.addNode(testNode3);
+        binarySearch.addNode(testNode4);
+        binarySearch.addNode(testNode5);
+        binarySearch.showAllRecords(testNode1);
+
+    }
+
 }
