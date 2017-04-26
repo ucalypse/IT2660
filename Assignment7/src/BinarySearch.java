@@ -6,13 +6,14 @@ Chapter 7 Exercise 31
  */
 public class BinarySearch {
     Node root;
+    Node checkNode;
+    Node parent;
 
     public void addNode(Node newNode) {
         if (root == null) {
             root = newNode;
         } else {
-            Node checkNode = root;
-            Node parent;
+            checkNode = root;
             while (true) {
                 parent = checkNode;
                 if (newNode.key > checkNode.key) {
@@ -23,19 +24,21 @@ public class BinarySearch {
                     }
                 }
                 if (newNode.key < checkNode.key) {
+                    parent = checkNode;
                     checkNode = checkNode.leftChild;
                     if (checkNode == null) {
                         parent.leftChild = newNode;
                         return;
                     }
-                } //else {
-//                    checkNode = checkNode.rightChild;
-//                    if (checkNode == null) {
-//                        parent.rightChild = newNode;
-//                       // checkNode = newNode;
-//                        return;
-//                    }
-//                }
+                }
+                else {
+                    parent = checkNode;
+                    checkNode = checkNode.rightChild;
+                    if (checkNode == null) {
+                        parent.rightChild = newNode;
+                        return;
+                    }
+                }
                 }
         }
 

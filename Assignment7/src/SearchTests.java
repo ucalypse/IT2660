@@ -13,26 +13,27 @@ public class SearchTests {
     BinarySearch binarySearch = new BinarySearch();
     @Test
     public void addNode_becomes_root()  {
-        node = new Node(1, "Donny");
-        binarySearch.addNode(node);
 
-        assertEquals(binarySearch.root.key, node.key);
+        binarySearch.addNode(new Node(1, "Donny"));
+
+        assertEquals(1, binarySearch.root.key);
 
     }
     @Test
     public void addNode_inserts_node()  {
-        Node testNode1 = new Node(10, "Donny");
-        Node testNode2 = new Node(4, "Donny");
-        Node testNode3 = new Node(7, "Donny");
-        Node testNode4 = new Node(15, "Donny");
-        binarySearch.addNode(testNode1);
-        binarySearch.addNode(testNode2);
-        binarySearch.addNode(testNode3);
-        binarySearch.addNode(testNode4);
+        binarySearch.addNode(new Node(10, "a"));
+        binarySearch.addNode(new Node(17, "b"));
+        binarySearch.addNode(new Node(4, "c"));
+        binarySearch.addNode(new Node(7, "d"));
+        binarySearch.addNode(new Node(20, "e"));
+        binarySearch.addNode(new Node(14, "f"));
 
-        assertEquals(binarySearch.root.leftChild.key, 4);
-        assertEquals(binarySearch.root.leftChild.rightChild.key, 7);
-        assertEquals(binarySearch.root.rightChild.key, 15);
+
+        assertEquals(4,binarySearch.root.leftChild.key);
+        assertEquals(7,binarySearch.root.leftChild.rightChild.key);
+        assertEquals(17,binarySearch.root.rightChild.key);
+        assertEquals(20,binarySearch.root.rightChild.rightChild.key);
+        assertEquals(14,binarySearch.root.rightChild.leftChild.key);
 
 
     }
