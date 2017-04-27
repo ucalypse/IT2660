@@ -28,7 +28,6 @@ public class Driver {
                 double studentGpa = input.nextDouble();
                 newStudent = new Node(studentId,studentName,studentGpa);
                 binarySearch.addNode(newStudent);
-
             }
             if (choice == 2) {
                 System.out.println("Enter the student ID number");
@@ -61,7 +60,6 @@ public class Driver {
                 binarySearch.showAllRecords(binarySearch.root);
             }
         }
-
     }
 
     public static void displayClassInfo() {

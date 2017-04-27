@@ -45,7 +45,6 @@ public class BinarySearch {
                 }
             }
         }
-
     }
 
     public Node fetchStudent(int key) {
@@ -61,6 +60,7 @@ public class BinarySearch {
 
     public boolean showAllRecords(Node currentNode) {
         if (currentNode == null) {
+            System.out.println("No Records to Display" + "\n");
             return true;
         }
         System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n" + "G.P.A: " + currentNode.gpa + "\n");
@@ -147,14 +147,12 @@ public class BinarySearch {
                 currentNode = currentNode.rightChild;
             }
         }
-        System.out.println("Record deleted successfully" + "\n");
         }
+        System.out.println("Record deleted successfully!" + "\n");
     }
 
     public void updateNode(int key, Node newStudent) {
         deleteNode(key);
         addNode(newStudent);
     }
-
-
 }
