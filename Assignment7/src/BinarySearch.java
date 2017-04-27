@@ -13,7 +13,8 @@ public class BinarySearch {
         //1st node entered becomes root
         if (root == null) {
             root = newNode;
-        } else {
+        }
+        else {
             checkNode = root;
             //infinite loop to take the place of recursion, which I prefer not to use if at all possible as it is hard to read
             while (true) {
@@ -68,7 +69,7 @@ public class BinarySearch {
         showAllRecords(currentNode.rightChild);
         return false;
     }
-
+//added this method to try to break some of the logic out of the already massive delete method
     public Node getParent(int key)  {
         Node currentNode = root;
         parent = currentNode;
@@ -86,6 +87,11 @@ public class BinarySearch {
     }
 
     public void deleteNode(int key) {
+        //to handle case when you only have 1 node you are trying to update in list
+        if (key == root.key)    {
+            root = null;
+        }
+        else    {
         Node currentNode = root;
         while (true) {
             if (currentNode.key == key) {
@@ -142,6 +148,7 @@ public class BinarySearch {
             }
         }
         System.out.println("Record deleted successfully" + "\n");
+        }
     }
 
     public void updateNode(int key, Node newStudent) {
