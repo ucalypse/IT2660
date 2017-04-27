@@ -14,6 +14,7 @@ public class Driver {
         BinarySearch binarySearch = new BinarySearch();
         Node newStudent;
         while (choice != 6) {
+            //Guess I havent quite gotten scanner objects down they keep exhibiting unexpected behavior, sorry for newing up 2 of them
             Scanner input = new Scanner(System.in);
             Scanner scanner = new Scanner(System.in);
             runMenu();
@@ -23,33 +24,41 @@ public class Driver {
                 String studentName = input.nextLine();
                 System.out.println("Enter student ID");
                 int studentId = input.nextInt();
-                newStudent = new Node(studentId,studentName);
+                System.out.println("Enter student G.P.A");
+                double studentGpa = input.nextDouble();
+                newStudent = new Node(studentId,studentName,studentGpa);
                 binarySearch.addNode(newStudent);
 
             }
             if (choice == 2) {
-                System.out.println("Enter the student number");
+                System.out.println("Enter the student ID number");
                int studentFind = input.nextInt();
                Node student = binarySearch.fetchStudent(studentFind);
-                System.out.println("Student Name: " + student.name + "\nStudent ID: " + student.key);
+                System.out.println("Student Name: " + student.name + "\nStudent ID: " + student.key + "\n" + "Student G.P.A.: " + student.gpa + "\n");
 
             }
             if (choice == 3) {
-                System.out.println("Enter the id of the student you wish to delete");
-                int deleteTicket = input.nextInt();
+                System.out.println("Enter the ID of the student you wish to delete");
+                int deleteStudent = input.nextInt();
+                binarySearch.deleteNode(deleteStudent);
 
             }
             if (choice == 4) {
-                System.out.println("Enter the id of the student you wish to update");
-                int updateTicket = input.nextInt();
-                System.out.println("Enter new ticket holder's name");
-
-                System.out.println("Enter the new ticket holder's seat");
-                int newNumber = input.nextInt();
+                System.out.println("Enter student's ID you wish to update");
+                int updateStudentId = input.nextInt();
+                System.out.println("Enter new student's name");
+                String updateStudentName = input.next();
+                System.out.println("Enter new student's ID");
+                int newStudentId = input.nextInt();
+                System.out.println("Enter new student's GPA");
+                double newStudentGpa = input.nextDouble();
+                newStudent = new Node(newStudentId,updateStudentName,newStudentGpa);
+                binarySearch.updateNode(updateStudentId, newStudent);
 
             }
             if (choice == 5) {
-                binarySearch.showAllRecords(new Node(3, "t"));
+                //must pass it the root as a parameter to serve as a starting point
+                binarySearch.showAllRecords(binarySearch.root);
             }
         }
 

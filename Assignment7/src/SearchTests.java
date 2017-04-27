@@ -15,19 +15,19 @@ public class SearchTests {
     @Test
     public void addNode_becomes_root()  {
 
-        binarySearch.addNode(new Node(1, "Donny"));
+        binarySearch.addNode(new Node(1, "Donny",1));
 
         assertEquals(1, binarySearch.root.key);
 
     }
     @Test
     public void addNode_inserts_node()  {
-        binarySearch.addNode(new Node(10, "a"));
-        binarySearch.addNode(new Node(17, "b"));
-        binarySearch.addNode(new Node(4, "c"));
-        binarySearch.addNode(new Node(7, "d"));
-        binarySearch.addNode(new Node(20, "e"));
-        binarySearch.addNode(new Node(14, "f"));
+        binarySearch.addNode(new Node(10, "a",1));
+        binarySearch.addNode(new Node(17, "b",1));
+        binarySearch.addNode(new Node(4, "c",1));
+        binarySearch.addNode(new Node(7, "d",1));
+        binarySearch.addNode(new Node(20, "e",1));
+        binarySearch.addNode(new Node(14, "f",1));
 
 
         assertEquals(4,binarySearch.root.leftChild.key);
@@ -41,11 +41,11 @@ public class SearchTests {
 
     @Test
     public void fetchStudent_returns_correct_student()  {
-        Node testNode1 = new Node(10, "A");
-        Node testNode2 = new Node(4, "B");
-        Node testNode3 = new Node(7, "C");
-        Node testNode4 = new Node(15, "D");
-        Node testNode5 = new Node(17, "I");
+        Node testNode1 = new Node(10, "A",1);
+        Node testNode2 = new Node(4, "B",1);
+        Node testNode3 = new Node(7, "C",1);
+        Node testNode4 = new Node(15, "D",1);
+        Node testNode5 = new Node(17, "I",1);
 
         binarySearch.addNode(testNode1);
         binarySearch.addNode(testNode2);
@@ -61,24 +61,23 @@ public class SearchTests {
 
     @Test
     public void deleteStudent_deletes_student() {
-        binarySearch.addNode(new Node(10, "a"));
-        binarySearch.addNode(new Node(17, "b"));
-        binarySearch.addNode(new Node(4, "c"));
-        binarySearch.addNode(new Node(7, "d"));
-        binarySearch.addNode(new Node(20, "e"));
-        binarySearch.addNode(new Node(14, "f"));
-        System.out.println(binarySearch.fetchStudent(4).name);
+        binarySearch.addNode(new Node(10, "a",1));
+        binarySearch.addNode(new Node(17, "b",1));
+        binarySearch.addNode(new Node(4, "c",1));
+        binarySearch.addNode(new Node(7, "d",1));
+        binarySearch.addNode(new Node(20, "e",1));
+        binarySearch.addNode(new Node(14, "f",1));
 
         assertEquals("f",binarySearch.fetchStudent(17).leftChild.name);
     }
 
     @Test
         public void showAllRecordsTest() {
-        Node testNode1 = new Node(10, "A");
-        Node testNode2 = new Node(4, "B");
-        Node testNode3 = new Node(7, "C");
-        Node testNode4 = new Node(15, "D");
-        Node testNode5 = new Node(17, "I");
+        Node testNode1 = new Node(10, "A",1);
+        Node testNode2 = new Node(4, "B",1);
+        Node testNode3 = new Node(7, "C",1);
+        Node testNode4 = new Node(15, "D",1);
+        Node testNode5 = new Node(17, "I",1);
 
         binarySearch.addNode(testNode1);
         binarySearch.addNode(testNode2);
@@ -90,11 +89,11 @@ public class SearchTests {
     }
         @Test
         public void return_parent_finds_correct_parent() {
-        Node testNode1 = new Node(10, "A");
-        Node testNode2 = new Node(4, "B");
-        Node testNode3 = new Node(7, "C");
-        Node testNode4 = new Node(15, "D");
-        Node testNode5 = new Node(17, "I");
+        Node testNode1 = new Node(10, "A",1);
+        Node testNode2 = new Node(4, "B",1);
+        Node testNode3 = new Node(7, "C",1);
+        Node testNode4 = new Node(15, "D",1);
+        Node testNode5 = new Node(17, "I",1);
 
         binarySearch.addNode(testNode1);
         binarySearch.addNode(testNode2);
@@ -110,14 +109,14 @@ public class SearchTests {
 
         @Test
         public void deleteNode_deletes_correct_value() {
-        Node testNode1 = new Node(10, "A");
-        Node testNode2 = new Node(4, "B");
-        Node testNode3 = new Node(7, "C");
-        Node testNode4 = new Node(15, "D");
-        Node testNode5 = new Node(17, "I");
-        Node testNode6 = new Node(13, "J");
-        Node testNode7 = new Node(2, "K");
-        Node testNode8 = new Node(14, "L");
+        Node testNode1 = new Node(10, "A",1);
+        Node testNode2 = new Node(4, "B",1);
+        Node testNode3 = new Node(7, "C",1);
+        Node testNode4 = new Node(15, "D",1);
+        Node testNode5 = new Node(17, "I",1);
+        Node testNode6 = new Node(13, "J",1);
+        Node testNode7 = new Node(2, "K",1);
+        Node testNode8 = new Node(14, "L",1);
 
         binarySearch.addNode(testNode1);
         binarySearch.addNode(testNode2);

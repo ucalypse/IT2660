@@ -62,7 +62,7 @@ public class BinarySearch {
         if (currentNode == null) {
             return true;
         }
-        System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n");
+        System.out.println("Name: " + currentNode.name + "\n" + "ID: " + currentNode.key + "\n" + "G.P.A: " + currentNode.gpa + "\n");
         //using recursion
         showAllRecords(currentNode.leftChild);
         showAllRecords(currentNode.rightChild);
@@ -111,7 +111,7 @@ public class BinarySearch {
                    getParent(key).rightChild = null;
                    break;
                 }
-                //handles case when there is only 1 child
+                //handles case when there is only 1 child on left side of tree
                 if (currentNode.leftChild == null && currentNode.key < getParent(key).key)  {
                     currentNode = currentNode.rightChild;
                     getParent(key).leftChild = currentNode;
@@ -122,6 +122,7 @@ public class BinarySearch {
                     getParent(key).rightChild = currentNode;
                     break;
                 }
+                //handles case when there is only 1 child on right side of tree
                 if (currentNode.rightChild == null && currentNode.key < getParent(key).key)  {
                     currentNode = currentNode.leftChild;
                     getParent(key).leftChild = currentNode;
@@ -140,6 +141,12 @@ public class BinarySearch {
                 currentNode = currentNode.rightChild;
             }
         }
+        System.out.println("Record deleted successfully" + "\n");
+    }
+
+    public void updateNode(int key, Node newStudent) {
+        deleteNode(key);
+        addNode(newStudent);
     }
 
 

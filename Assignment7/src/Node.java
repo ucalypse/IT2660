@@ -5,13 +5,14 @@ Due April 27, Spring 2017
 Chapter 7 Exercise 31
  */
 public class Node {
-    //only added parent to help with delete method which is why I didn't initialize it in constructor
-    Node leftChild, rightChild, parent;
+    Node leftChild, rightChild;
     String name;
     int key;
+    double gpa;
 
-    public Node(int Key, String Name)    {
+    public Node(int Key, String Name, double GPA)    {
         key = Key;
         name = Name;
+        gpa = GPA;
     }
 }
