@@ -5,7 +5,6 @@ Due May 4, Spring 2017
 Chapter 8 Exercise 39
  */
 
-import java.util.Scanner;
 public class Driver {
 
     public static void displayClassInfo() {
@@ -16,11 +15,18 @@ public class Driver {
     }
 
     public static void main(String[] args)  {
-        Scanner input = new Scanner(System.in);
+        //change the values in the sample array to test the input
+        int[] sample = new int[]{81,16,2,89,54,23,76,25,37,107,1,74,45,16,31,58};
         displayClassInfo();
         System.out.println("Enter a number array to test assignment");
-        int testSize = input.nextInt();
 
         MergeSort mergeSort = new MergeSort();
+        mergeSort.sort(sample);
+
+        System.out.println(mergeSort.swaps);
+        System.out.println(mergeSort.comparisons);
+        for(int i =0;i<sample.length;i++)   {
+            System.out.println(sample[i]);
+        }
     }
 }
