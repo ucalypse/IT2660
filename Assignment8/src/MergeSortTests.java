@@ -1,5 +1,8 @@
-/**
- * Created by Dada on 5/1/2017.
+/*
+Donald Davis
+IT 2660 Data Structures & Algorithms CRN 13907
+Due May 4, Spring 2017
+Chapter 8 Exercise 39
  */
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

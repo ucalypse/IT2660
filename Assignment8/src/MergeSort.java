@@ -1,10 +1,12 @@
-/**
- * Created by Dada on 5/1/2017.
+/*
+Donald Davis
+IT 2660 Data Structures & Algorithms CRN 13907
+Due May 4, Spring 2017
+Chapter 8 Exercise 39
  */
 public class MergeSort {
     int[] newNumberArray;
     int[] temp;
-
     int arrayLength;
 
     public void sort(int[] input) {
