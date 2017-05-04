@@ -5,8 +5,7 @@ Due May 4, Spring 2017
 Chapter 8 Exercise 39
  */
 public class MergeSort {
-    int[] newNumberArray;
-    int[] temp;
+    int[] newNumberArray, temp;
     int arrayLength;
     int swaps=0;
     int comparisons=0;
